@@ -1,41 +1,58 @@
 package co.edu.udistrital.persistencia;
 
-import co.edu.udistrital.clientes.Cliente;
+import co.edu.udistrital.cine.logica.clientes.Cliente;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
 import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
+import org.hibernate.service.ServiceRegistry;
 
 public class HibernateSession {
 
     private static SessionFactory sessionFactory;
-    
+
     static {
-        bootstrap();
+        bootstrapHibernate();
     }
-    
-    public static Session openSession() {                
-        return null;
+
+    public static Session openSession() {
+        return sessionFactory.openSession();
     }
-    
-    private static void bootstrap() {
+
+    private static void bootstrapHibernate() {
         try {
-            StandardServiceRegistry registry = new StandardServiceRegistryBuilder()
+            configureBasics();
+        } catch (Exception e) {
+            logError(e);
+        }
+    }
+
+    private static void configureBasics() {
+        StandardServiceRegistry registry = createStandardServiceRegistry();
+        Metadata metadata = generateMetaData(registry);
+        sessionFactory = metadata.buildSessionFactory();
+    }
+
+    private static StandardServiceRegistry createStandardServiceRegistry() {
+        return new StandardServiceRegistryBuilder()
                 .loadProperties("hibernate.properties")
                 .build();
-        
-        Metadata metadata = new MetadataSources(registry)
+    }
+
+    private static Metadata generateMetaData(ServiceRegistry registry) {
+        return new MetadataSources(registry)
                 .addAnnotatedClass(Cliente.class)
                 .buildMetadata();
-        
-        sessionFactory = metadata.buildSessionFactory();
-        } catch(Exception e)        {
-            System.out.println(e.getMessage());
-            e.printStackTrace();
-        }
-        
+    }
+
+    private static void logError(Exception e) {
+        System.out.println(e.getMessage());
     }
     
+    public static void shutdown() {
+        sessionFactory.close();
+    }
+
 }
