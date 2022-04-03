@@ -6,7 +6,11 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AllArgsConstructor;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Entity
 @Table(name = "clientes")
 public class Cliente {
@@ -27,7 +31,7 @@ public class Cliente {
     
     @Column
     private Integer puntos;
-    
+        
     public Integer getId() {
         return id;
     }
