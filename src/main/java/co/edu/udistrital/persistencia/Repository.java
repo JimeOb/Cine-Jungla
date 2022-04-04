@@ -3,6 +3,7 @@ package co.edu.udistrital.persistencia;
 import java.util.List;
 import java.util.Optional;
 import org.hibernate.Session;
+import org.hibernate.query.SelectionQuery;
 
 public class Repository<K> {
 
@@ -31,10 +32,19 @@ public class Repository<K> {
         return resultList;
     }
 
+    public List<K> findByCriteria(String criteria) {
+
+        Session session = HibernateSession.openSession();
+        SelectionQuery<K> result = session.createSelectionQuery("SELECT e FROM " + typeClass.getSimpleName()
+                + " e WHERE " + criteria, typeClass);
+
+        return result.getResultList();
+    }
+
     public void insert(K entity) {
         Session session = HibernateSession.openSession();
         performMutableAction(session, () -> {
-            session.merge(entity);
+            session.persist(entity);
             session.flush();
         });
     }
@@ -46,13 +56,17 @@ public class Repository<K> {
 
     public void delete(int id) {
         Session session = HibernateSession.openSession();
-        performMutableAction(session, () -> session.remove(id));
+        Optional<K> optEntity = findById(id);
+        K entity = optEntity.orElseThrow();
+        performMutableAction(session, () -> session.remove(entity));               
     }
-    
+
     public void deleteAll() {
         Session session = HibernateSession.openSession();
-        session.createMutationQuery("DELETE FROM " + typeClass.getSimpleName());
-        session.close();
+        performMutableAction(session, () -> {
+            session.createMutationQuery("delete from " + typeClass.getSimpleName())
+                    .executeUpdate();
+        });
     }
 
     private void performMutableAction(Session session, Runnable action) {
