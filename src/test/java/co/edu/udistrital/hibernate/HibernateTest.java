@@ -80,6 +80,7 @@ public class HibernateTest {
 
         cliente.setId(1);
         cliente.setNombre("Prueba");
+        
         cliente.setEmail("prueba@correo");
         cliente.setPuntos(1);
 
