@@ -16,16 +16,18 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cliente extends User {
+
+    private static final int MAX_POINTS = 100;
     
-    @Id    
+    @Id
     @Column(name = "id_cliente")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
-    
-    @Column
-    private String nombre;
-    
+
     @Column
     private Integer puntos;
-    
+
+    public void addPoints(Integer puntos) {        
+        this.puntos = (this.puntos + puntos) % MAX_POINTS;        
+    }    
 }
