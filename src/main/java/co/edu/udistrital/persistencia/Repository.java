@@ -1,5 +1,6 @@
 package co.edu.udistrital.persistencia;
 
+import jakarta.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 import org.hibernate.Session;
@@ -35,8 +36,8 @@ public class Repository<K> {
     public List<K> findByCriteria(String criteria) {
 
         Session session = HibernateSession.openSession();
-        SelectionQuery<K> result = session.createSelectionQuery("SELECT e FROM " + typeClass.getSimpleName()
-                + " e WHERE " + criteria, typeClass);
+        Query result = session.createQuery("from " + typeClass.getSimpleName()
+                + " where " + criteria, typeClass);
 
         return result.getResultList();
     }

@@ -22,7 +22,7 @@ public class ClienteService {
 
     private boolean existEmail(String email) {
 
-        List<Cliente> clientsWithThatEmail = repository.findByCriteria(String.format("e.email = '%s'", email));
+        List<Cliente> clientsWithThatEmail = repository.findByCriteria(String.format("credentials.email = '%s'", email));
 
         return clientsWithThatEmail.size() > 0;
     }

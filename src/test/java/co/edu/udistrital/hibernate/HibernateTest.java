@@ -1,6 +1,7 @@
 package co.edu.udistrital.hibernate;
 
 import co.edu.udistrital.cine.logica.clientes.Cliente;
+import co.edu.udistrital.cine.logica.clientes.Credentials;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -9,10 +10,12 @@ import org.hibernate.boot.MetadataSources;
 import org.hibernate.boot.registry.StandardServiceRegistry;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.ArgumentCaptor;
 
 public class HibernateTest {
 
@@ -45,6 +48,16 @@ public class HibernateTest {
         Session session = sessionFactory.openSession();
         session.beginTransaction();
         session.persist(cliente);
+        session.flush();
+        session.getTransaction().commit();
+        session.close();
+    }
+    
+    @AfterEach
+    public void tearDown() {
+        Session session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.createMutationQuery("DELETE FROM Cliente").executeUpdate();
         session.getTransaction().commit();
         session.close();
     }
@@ -66,7 +79,9 @@ public class HibernateTest {
     @Test
     public void hibernateShouldDeleteAClient() {
         Session session = sessionFactory.openSession();
+        session.beginTransaction();
         session.remove(cliente);
+        session.getTransaction().commit();
 
         final List<Cliente> clientes = getClientesInDB(session);
         session.close();
@@ -78,21 +93,17 @@ public class HibernateTest {
     public void hibernateShouldUpdateAnOldRecord() {
         Session session = sessionFactory.openSession();
 
-        cliente.setId(1);
-        cliente.setNombre("Prueba");
-        
-        cliente.setEmail("prueba@correo");
+        cliente.setNombre("Prueba");        
+        cliente.setCredentials(new Credentials("prueba@correo", ""));
         cliente.setPuntos(1);
 
         session.beginTransaction();
         session.merge(cliente);
         session.getTransaction().commit();
 
-        final Cliente updatedClient = session.byId(Cliente.class).load(1);
-        System.out.println(updatedClient);
+        final Cliente updatedClient = session.byId(Cliente.class).load(cliente.getId());
         
         Assertions.assertEquals(cliente.getEmail(), updatedClient.getEmail());
-
     }
 
     public List<Cliente> getClientesInDB(Session session) {

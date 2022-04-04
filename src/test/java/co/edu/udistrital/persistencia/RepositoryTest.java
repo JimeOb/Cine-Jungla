@@ -1,12 +1,13 @@
 package co.edu.udistrital.persistencia;
 
 import co.edu.udistrital.cine.logica.clientes.Cliente;
+import co.edu.udistrital.cine.logica.clientes.Credentials;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
 import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 public class RepositoryTest {
@@ -17,25 +18,21 @@ public class RepositoryTest {
         this.repoClientes = new Repository<>(Cliente.class);
     }
 
-    @BeforeEach
-    public void setup() {
+    @AfterEach
+    public void tearDown() {
         repoClientes.deleteAll();
     }
 
     @AfterAll
-    public static void teardownAll() {
+    public static void tearDownAll() {
         HibernateSession.shutdown();
     }
 
     @Test
     public void repositoryShouldFindAnEntityById() {
 
-        final Cliente client = generateTestCliente();
-        Optional<Cliente> optClient = repoClientes.findById(1);
-
-        Assertions.assertFalse(optClient.isPresent());
         insertTestClient(generateTestCliente());
-        optClient = repoClientes.findById(1);
+        final Optional<Cliente> optClient = repoClientes.findById(1);
 
         Assertions.assertTrue(optClient.isPresent());
     }
@@ -65,13 +62,19 @@ public class RepositoryTest {
         Cliente client = generateTestCliente();
         insertTestClient(client);
 
-        List<Cliente> clients = repoClientes.findByCriteria(String.format("e.email = '%s'", "anotheremail@mail"));
-
-        Assertions.assertEquals(0, clients.size());
-
-        clients = repoClientes.findByCriteria(String.format("e.email = '%s'", client.getEmail()));
+        final List<Cliente> clients = repoClientes.findByCriteria(String.format("credentials.email = '%s'" , client.getEmail()));
 
         Assertions.assertEquals(1, clients.size());
+    }
+    
+    @Test
+    public void reposiroyShouldNotFindAClientWithConcreteEmail() {
+        Cliente client = generateTestCliente();
+        insertTestClient(client);
+
+        List<Cliente> clients = repoClientes.findByCriteria(String.format("credentials.email = '%s'" , "anotheremail@mail"));
+
+        Assertions.assertEquals(0, clients.size());
     }
 
     @Test
@@ -88,14 +91,13 @@ public class RepositoryTest {
     public void repositoryShouldUpdateAEntity() {
 
         Cliente client = generateTestCliente();
-        insertTestClient(client);
-
-        client.setEmail("Nuevoemail@g.com");
+        insertTestClient(client);        
+        client.setCredentials(new Credentials("Nuevoemail@g.com", "newpass"));
 
         repoClientes.update(client);
         Optional<Cliente> updatedClient = repoClientes.findById(client.getId());
 
-        Assertions.assertEquals(client.getEmail(), updatedClient.get().getEmail());
+        Assertions.assertEquals(client.getCredentials(), updatedClient.get().getCredentials());
     }
 
     @Test
@@ -103,7 +105,6 @@ public class RepositoryTest {
 
         Cliente client = generateTestCliente();
         insertTestClient(client);
-        System.out.println(client.getId());
 
         repoClientes.delete(client.getId());
 
@@ -134,8 +135,7 @@ public class RepositoryTest {
         Cliente cliente = new Cliente();
 
         cliente.setNombre("cliente prueba");
-        cliente.setEmail("emailprueba@prueba.com");
-        cliente.setPassword("pass");
+        cliente.setCredentials(new Credentials("emailprueba@prueba.com", "pass"));
         cliente.setPuntos(0);
 
         return cliente;

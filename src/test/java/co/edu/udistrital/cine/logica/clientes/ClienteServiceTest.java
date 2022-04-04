@@ -16,34 +16,38 @@ public class ClienteServiceTest {
 
     @Mock private Repository<Cliente> repoClientes;
     private ClienteService service;
+    private Cliente cliente;
 
     @BeforeEach
     public void setup() {
         service = new ClienteService(repoClientes);
+        cliente = new Cliente();
+        cliente.setCredentials(new Credentials("mail@mail", "pass"));
     }
 
     @Test
     public void clientServiceShouldRegisterANewClient() {
+        
+        Cliente newClient = new Cliente(3, "teresa", 80);
+        newClient.setCredentials(new Credentials("myemail@mail", "pass"));
+        
+        service.registrarCliente(newClient);
 
-        Cliente cliente = new Cliente(3, "teresa", "teresa@gmail", "pass", 80);
-
-        service.registrarCliente(cliente);
-
-        ArgumentCaptor<Cliente> captor = ArgumentCaptor.forClass(Cliente.class);
-        verify(repoClientes).insert(captor.capture());
-        Assertions.assertEquals(cliente, captor.getValue());
+        ArgumentCaptor<Cliente> argument = ArgumentCaptor.forClass(Cliente.class);
+        verify(repoClientes).insert(argument.capture());
+        Assertions.assertEquals(newClient, argument.getValue());
     }
 
     @Test
     public void clienteServiceShouldRejectRegistrationByDuplicatedEmail() {
 
-        Cliente cliente = new Cliente(2, "pedro", "arnol@gmail", "pass", 20);
+        Cliente newClient = new Cliente(2, "pedro", 20);
+        newClient.setCredentials(new Credentials("mail@mail", "pass"));
 
-        when(repoClientes.findByCriteria(anyString())).thenReturn(List.of(
-                new Cliente(1, "arnol", "arnol@gmail", "pass123", 10)
-        ));
+        when(repoClientes.findByCriteria(String.format("credentials.email = '%s'", newClient.getEmail())))
+                .thenReturn(List.of(cliente));
 
-        Assertions.assertThrows(RegisterException.class, () -> service.registrarCliente(cliente));
+        Assertions.assertThrows(RegisterException.class, () -> service.registrarCliente(newClient));
         verify(repoClientes, never()).insert(any());
     }
 
