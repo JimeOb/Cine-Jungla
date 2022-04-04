@@ -19,6 +19,9 @@ public abstract class User {
     @Column(name = "id_role")
     @Getter private Role role;
     
+    @Column
+    private String nombre;
+    
     public String getEmail() {
         return credentials.getEmail();
     }    

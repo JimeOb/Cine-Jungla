@@ -1,5 +1,6 @@
 package co.edu.udistrital.persistencia;
 
+import co.edu.udistrital.cine.logica.clientes.ClientBuilder;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.logica.clientes.Credentials;
 import java.util.List;
@@ -132,11 +133,10 @@ public class RepositoryTest {
     }
 
     private Cliente generateTestCliente() {
-        Cliente cliente = new Cliente();
-
-        cliente.setNombre("cliente prueba");
-        cliente.setCredentials(new Credentials("emailprueba@prueba.com", "pass"));
-        cliente.setPuntos(0);
+        Cliente cliente = new ClientBuilder().addNombre("cliente prueba")
+                .addCredentials(new Credentials("emailprueba@prueba.com", "pass"))
+                .addPuntos(0)
+                .build();
 
         return cliente;
     }

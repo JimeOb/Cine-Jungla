@@ -1,5 +1,6 @@
 package co.edu.udistrital.hibernate;
 
+import co.edu.udistrital.cine.logica.clientes.ClientBuilder;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.logica.clientes.Credentials;
 import java.util.List;
@@ -15,7 +16,6 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.ArgumentCaptor;
 
 public class HibernateTest {
 
@@ -43,7 +43,7 @@ public class HibernateTest {
 
     @BeforeEach
     public void setup() {
-        cliente = new Cliente();
+        cliente = new ClientBuilder().build();
 
         Session session = sessionFactory.openSession();
         session.beginTransaction();

@@ -17,19 +17,23 @@ public class ClienteServiceTest {
     @Mock private Repository<Cliente> repoClientes;
     private ClienteService service;
     private Cliente cliente;
+    private ClientBuilder builder;
 
     @BeforeEach
     public void setup() {
         service = new ClienteService(repoClientes);
-        cliente = new Cliente();
-        cliente.setCredentials(new Credentials("mail@mail", "pass"));
+        builder = new ClientBuilder();
+        cliente = builder
+                .addCredentials(new Credentials("mail@mail", "pass"))
+                .build();
     }
 
     @Test
     public void clientServiceShouldRegisterANewClient() {
         
-        Cliente newClient = new Cliente(3, "teresa", 80);
-        newClient.setCredentials(new Credentials("myemail@mail", "pass"));
+        Cliente newClient = builder
+                .addCredentials(new Credentials("myemail@mail", "pass"))
+                .build();
         
         service.registrarCliente(newClient);
 
@@ -41,8 +45,9 @@ public class ClienteServiceTest {
     @Test
     public void clienteServiceShouldRejectRegistrationByDuplicatedEmail() {
 
-        Cliente newClient = new Cliente(2, "pedro", 20);
-        newClient.setCredentials(new Credentials("mail@mail", "pass"));
+        Cliente newClient = builder
+                .addCredentials(new Credentials("mail@mail", "pass"))
+                .build();
 
         when(repoClientes.findByCriteria(String.format("credentials.email = '%s'", newClient.getEmail())))
                 .thenReturn(List.of(cliente));
