@@ -2,6 +2,9 @@ package co.edu.udistrital.persistencia;
 
 import co.edu.udistrital.cine.empleado.Contrato;
 import co.edu.udistrital.cine.empleado.Empleado;
+import co.edu.udistrital.cine.logica.Multiplex;
+import co.edu.udistrital.cine.logica.Sala;
+import co.edu.udistrital.cine.logica.Silla;
 import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import org.hibernate.Session;
@@ -50,6 +53,9 @@ public class HibernateSession {
                 .addAnnotatedClass(BoletaPremio.class)
                 .addAnnotatedClass(Empleado.class)
                 .addAnnotatedClass(Contrato.class)
+                .addAnnotatedClass(Multiplex.class)
+                .addAnnotatedClass(Sala.class)
+                .addAnnotatedClass(Silla.class)
                 .buildMetadata();
     }
 

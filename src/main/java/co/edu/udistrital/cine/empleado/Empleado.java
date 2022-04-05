@@ -1,5 +1,6 @@
 package co.edu.udistrital.cine.empleado;
 
+import co.edu.udistrital.cine.logica.Multiplex;
 import co.edu.udistrital.cine.logica.clientes.User;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
@@ -45,5 +47,9 @@ public class Empleado extends User {
     @OneToOne
     @JoinColumn(name = "id_contrato")
     private Contrato contrato;
+    
+    @ManyToOne
+    @JoinColumn(name = "id_multiplex")
+    private Multiplex multiplex;
     
 }
