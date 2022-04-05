@@ -2,6 +2,7 @@ package co.edu.udistrital.persistencia;
 
 import jakarta.persistence.Query;
 import java.util.List;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import org.hibernate.Session;
 
@@ -57,7 +58,7 @@ public class Repository<K> {
     public void delete(int id) {
         Session session = HibernateSession.openSession();
         Optional<K> optEntity = findById(id);
-        K entity = optEntity.orElseThrow();
+        K entity = optEntity.orElseThrow(NoSuchElementException::new);
         performMutableAction(session, () -> session.remove(entity));               
     }
 
