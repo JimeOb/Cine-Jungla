@@ -15,11 +15,13 @@ public class Modelo {
     private VistaSillas vistaSillas;
     private VistaMain vistaMain;
     private VistaMultiplex vistaMultiplex;
+    private VistaConfiteria vistaConfiteria;
     
     private Modelo() {
         vistaSillas = new VistaSillas();
         vistaMain = new VistaMain();
         vistaMultiplex = new VistaMultiplex();
+        vistaConfiteria = new VistaConfiteria();
     }
 
     public static Modelo getInstance() {
@@ -39,6 +41,9 @@ public class Modelo {
 
     public VistaMultiplex getVistaMultiplex() {
         return vistaMultiplex;
+    }
+    public VistaConfiteria getVistaConfiteria(){
+        return vistaConfiteria;
     }
 
     public void iniciar() {
