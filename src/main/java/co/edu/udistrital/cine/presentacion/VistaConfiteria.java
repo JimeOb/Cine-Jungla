@@ -5,18 +5,37 @@
  */
 package co.edu.udistrital.cine.presentacion;
 
+import co.edu.udistrital.cine.logica.confiteria.creadorProductos.FactAlimento;
+import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  *
  * @author sjgar
  */
 public class VistaConfiteria extends javax.swing.JFrame {
-
+    private FactAlimento comida = new FactAlimento();
     /**
      * Creates new form vistaConfiteria
      */
+    
     public VistaConfiteria() {
         initComponents();
+        llenarProductos();
+ 
     }
+    public void llenarProductos(){
+        List<Comida> cons = new ArrayList();
+        cons = comida.verStock();
+        jcNombCom.removeAllItems();
+        
+        for(int i = 0;i<=cons.size(); i++){
+            jcNombCom.addItem(cons.get(i).getNombre());
+        }
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -28,12 +47,12 @@ public class VistaConfiteria extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jcNombCom = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jcNombCom.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
         jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
 
@@ -43,7 +62,7 @@ public class VistaConfiteria extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(234, 234, 234)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jcNombCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(87, 87, 87)
                 .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(228, Short.MAX_VALUE))
@@ -53,7 +72,7 @@ public class VistaConfiteria extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(193, 193, 193)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jcNombCom, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(251, Short.MAX_VALUE))
         );
@@ -115,8 +134,8 @@ public class VistaConfiteria extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JComboBox<String> jcNombCom;
     // End of variables declaration//GEN-END:variables
 }
