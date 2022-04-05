@@ -5,53 +5,52 @@
  */
 package co.edu.udistrital.cine.logica.confiteria.creadorProductos;
 
-import co.edu.udistrital.cine.logica.confiteria.productos.Chocolatina;
+
 import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
-import co.edu.udistrital.cine.logica.confiteria.productos.Gaseosa;
-import co.edu.udistrital.cine.logica.confiteria.productos.Nachos;
-import co.edu.udistrital.cine.logica.confiteria.productos.PerroCaliente;
-import co.edu.udistrital.cine.logica.confiteria.productos.Sandwich;
+import co.edu.udistrital.persistencia.Repository;
+import java.util.ArrayList;
+import java.util.List;
 
 
 /**
  *
  * @author sjgar
  */
-public class FactAlimento extends FactComida {
-
+public class FactAlimento {
     
-
-    @Override
-    public String factoryMethod(String comida) {
-     if("chocolatina".equals(comida.toLowerCase())){
-        Comida chocolatina = new Chocolatina();
-        return chocolatina.crearComida();
+    Repository<Comida> repo = new Repository(Comida.class);
+    
+    public List<Comida> entregaComi(List<String> nombre, List<Integer> cant) {
+        
+     List<Comida> lista = new ArrayList();
+     List<Comida> cons = new ArrayList();
+     Comida comida;
+     
+     
+     for(int i = 0;i<=cant.size(); i++){
+         
+           cons = repo.findByCriteria("nombre = '"+ nombre.get(i) + "'");
+           comida = cons.get(0);
+           comida.setCantidad(cant.get(i));
+           lista.add(comida);
      }
-     else if("gaseosa".equals(comida.toLowerCase())){
-         Comida gaseosa = new Gaseosa();
-         return gaseosa.crearComida();
-     }
-     else if("nachos".equals(comida.toLowerCase())){
-         Comida nachos = new Nachos();
-         return nachos.crearComida();
-     }
-     else if("perro caliente".equals(comida.toLowerCase())){
-         Comida perroCa = new PerroCaliente();
-         return perroCa.crearComida();
-     }
-     else if("mantequilla".equals(comida.toLowerCase()) || "caramelo".equals(comida.toLowerCase()) || "mix".equals(comida.toLowerCase())){
-         FactPalomita palomitas = new FactPalomita();
-         return palomitas.factoryMethod(comida);
-     }
-     else if("sandwich".equals(comida.toLowerCase())){
-         Comida sandwich = new Sandwich();
-         return sandwich.crearComida();
-     }
-     else{
-         return "El producto seleccionado no existe";
-     }
+     return lista;
+     
     }
     
+    
+    
+    public List<Comida> verStock(){
+
+        return repo.findAll();
+        
+    }
+    
+    public void rellenarStock(Comida comida){
+        comida.setCantidad(15);
+        repo.update(comida);
+        
+    }
     
     
     

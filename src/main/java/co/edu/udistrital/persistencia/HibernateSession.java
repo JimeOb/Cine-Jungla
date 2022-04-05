@@ -4,6 +4,7 @@ import co.edu.udistrital.cine.empleado.Contrato;
 import co.edu.udistrital.cine.empleado.Empleado;
 import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
+import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -50,6 +51,7 @@ public class HibernateSession {
                 .addAnnotatedClass(BoletaPremio.class)
                 .addAnnotatedClass(Empleado.class)
                 .addAnnotatedClass(Contrato.class)
+                .addAnnotatedClass(Comida.class)
                 .buildMetadata();
     }
 
