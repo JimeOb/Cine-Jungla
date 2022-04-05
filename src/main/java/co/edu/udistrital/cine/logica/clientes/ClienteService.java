@@ -24,7 +24,7 @@ public class ClienteService {
 
         List<Cliente> clientsWithThatEmail = repository.findByCriteria(String.format("credentials.email = '%s'", email));
 
-        return clientsWithThatEmail.size() > 0;
+        return !clientsWithThatEmail.isEmpty();
     }
 
 }

@@ -4,7 +4,6 @@ import jakarta.persistence.Query;
 import java.util.List;
 import java.util.Optional;
 import org.hibernate.Session;
-import org.hibernate.query.SelectionQuery;
 
 public class Repository<K> {
 
