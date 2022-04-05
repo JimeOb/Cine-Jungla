@@ -9,10 +9,10 @@ import java.util.Optional;
 
 public class SessionService {
 
-    private final Repository<Cliente> repository;
+    private final Repository repository;
     private final AppSession appSession;
             
-    public SessionService(Repository<Cliente> repository, AppSession appSession) {
+    public SessionService(Repository repository, AppSession appSession) {
         this.repository = repository;
         this.appSession = appSession;
     }
@@ -30,7 +30,7 @@ public class SessionService {
     
     private boolean validateCredentials(Credentials credentials) {
         
-        List<Cliente> user = repository.findByCriteria(String.format("credentials.email = '%s' AND credentials.password = '%s'", 
+        List<User> user = repository.findByCriteria(String.format("credentials.email = '%s' AND credentials.password = '%s'", 
                 credentials.getEmail(), 
                 credentials.getPassword())
         );

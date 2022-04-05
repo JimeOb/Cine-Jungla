@@ -75,5 +75,4 @@ public class SessionServiceTest {
         verify(appSession).setLoggedUser(Optional.ofNullable(null));
         
     }
-
 }
