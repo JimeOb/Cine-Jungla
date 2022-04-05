@@ -17,7 +17,7 @@ public class Launcher{
     private Modelo miApp;
 
     public Launcher(){
-        miApp = new Modelo();
+        miApp = Modelo.getInstance();
         miApp.iniciar();
     }
         
