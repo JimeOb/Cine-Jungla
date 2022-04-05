@@ -9,6 +9,7 @@ package co.edu.udistrital.cine.logica.confiteria.creadorProductos;
 import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
 import co.edu.udistrital.persistencia.Repository;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 
@@ -19,12 +20,12 @@ import java.util.List;
 public class FactAlimento {
     
     Repository<Comida> repo = new Repository(Comida.class);
+    List<Comida> cons = new ArrayList();
+    Comida comida;
     
     public List<Comida> entregaComi(List<String> nombre, List<Integer> cant) {
         
      List<Comida> lista = new ArrayList();
-     List<Comida> cons = new ArrayList();
-     Comida comida;
      
      
      for(int i = 0;i<=cant.size(); i++){
@@ -51,6 +52,18 @@ public class FactAlimento {
         repo.update(comida);
         
     }
+    
+    public List<String> nomb(){
+        List<String> list = new ArrayList();
+        cons = this.verStock();
+        for(int i = 0;i<=cons.size(); i++){
+            list.add(cons.get(i).getNombre());
+        }
+        
+        
+        return list;
+    }
+
     
     
     
