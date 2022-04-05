@@ -1,5 +1,7 @@
 package co.edu.udistrital.persistencia;
 
+import co.edu.udistrital.cine.empleado.Contrato;
+import co.edu.udistrital.cine.empleado.Empleado;
 import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import org.hibernate.Session;
@@ -46,6 +48,8 @@ public class HibernateSession {
         return new MetadataSources(registry)
                 .addAnnotatedClass(Cliente.class)
                 .addAnnotatedClass(BoletaPremio.class)
+                .addAnnotatedClass(Empleado.class)
+                .addAnnotatedClass(Contrato.class)
                 .buildMetadata();
     }
 
