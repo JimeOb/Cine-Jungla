@@ -34,7 +34,6 @@ public class VistaMain extends javax.swing.JFrame {
         jbPelicula6 = new javax.swing.JButton();
         jlTittle = new javax.swing.JLabel();
         jbPelicula2 = new javax.swing.JButton();
-        jlPortada = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -43,12 +42,12 @@ public class VistaMain extends javax.swing.JFrame {
         jbPelicula1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula1.setText("Pelicula 1");
         jpMain.add(jbPelicula1);
-        jbPelicula1.setBounds(60, 110, 120, 80);
+        jbPelicula1.setBounds(60, 110, 160, 90);
 
         jbPelicula3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula3.setText("Pelicula 3");
         jpMain.add(jbPelicula3);
-        jbPelicula3.setBounds(500, 110, 150, 80);
+        jbPelicula3.setBounds(500, 110, 150, 90);
 
         jbPelicula4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula4.setText("Pelicula 4");
@@ -57,8 +56,13 @@ public class VistaMain extends javax.swing.JFrame {
 
         jbPelicula5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula5.setText("Pelicula 5");
+        jbPelicula5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jbPelicula5ActionPerformed(evt);
+            }
+        });
         jpMain.add(jbPelicula5);
-        jbPelicula5.setBounds(290, 300, 130, 80);
+        jbPelicula5.setBounds(280, 300, 160, 80);
 
         jbPelicula6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula6.setText("Pelicula 6");
@@ -74,12 +78,7 @@ public class VistaMain extends javax.swing.JFrame {
         jbPelicula2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         jbPelicula2.setText("Pelicula 2");
         jpMain.add(jbPelicula2);
-        jbPelicula2.setBounds(290, 110, 130, 80);
-
-        jlPortada.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/UD/cine/Jungla.jpg"))); // NOI18N
-        jlPortada.setText("CINE JUNGLA");
-        jpMain.add(jlPortada);
-        jlPortada.setBounds(11, 10, 690, 497);
+        jbPelicula2.setBounds(280, 110, 160, 90);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -100,6 +99,10 @@ public class VistaMain extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jbPelicula5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jbPelicula5ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jbPelicula5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -144,7 +147,6 @@ public class VistaMain extends javax.swing.JFrame {
     private javax.swing.JButton jbPelicula4;
     private javax.swing.JButton jbPelicula5;
     private javax.swing.JButton jbPelicula6;
-    private javax.swing.JLabel jlPortada;
     private javax.swing.JLabel jlTittle;
     private javax.swing.JPanel jpMain;
     // End of variables declaration//GEN-END:variables
