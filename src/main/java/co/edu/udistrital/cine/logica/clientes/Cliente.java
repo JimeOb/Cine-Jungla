@@ -1,5 +1,6 @@
 package co.edu.udistrital.cine.logica.clientes;
 
+import co.edu.udistrital.cine.peliculas.Reservacion;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -35,6 +36,9 @@ public class Cliente extends User {
     
     @OneToMany(mappedBy = "cliente", fetch = FetchType.EAGER)
     private List<BoletaPremio> boletasPremio = new ArrayList<>();
+    
+    @OneToMany(mappedBy = "cliente")
+    private List<Reservacion> reservaciones;
 
     public void addPoints(Integer puntos) {        
         this.puntos += puntos; 

@@ -7,6 +7,10 @@ import co.edu.udistrital.cine.logica.Sala;
 import co.edu.udistrital.cine.logica.Silla;
 import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
+import co.edu.udistrital.cine.peliculas.HorariosPelicula;
+import co.edu.udistrital.cine.peliculas.Pelicula;
+import co.edu.udistrital.cine.peliculas.Reservacion;
+import co.edu.udistrital.cine.peliculas.ValoracionPelicula;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -56,6 +60,10 @@ public class HibernateSession {
                 .addAnnotatedClass(Multiplex.class)
                 .addAnnotatedClass(Sala.class)
                 .addAnnotatedClass(Silla.class)
+                .addAnnotatedClass(Reservacion.class)
+                .addAnnotatedClass(HorariosPelicula.class)
+                .addAnnotatedClass(Pelicula.class)
+                .addAnnotatedClass(ValoracionPelicula.class)
                 .buildMetadata();
     }
 
