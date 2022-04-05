@@ -5,7 +5,7 @@
  */
 package co.edu.udistrital.cine.logica.confiteria.creadorProductos;
 
-import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
+import co.edu.udistrital.cine.logica.confiteria.productos.strategypalomitas.Palomitas;
 import co.edu.udistrital.cine.logica.confiteria.productos.strategypalomitas.PalomitasCaramelo;
 import co.edu.udistrital.cine.logica.confiteria.productos.strategypalomitas.PalomitasMantequilla;
 import co.edu.udistrital.cine.logica.confiteria.productos.strategypalomitas.PalomitasMix;
@@ -14,11 +14,11 @@ import co.edu.udistrital.cine.logica.confiteria.productos.strategypalomitas.Palo
  *
  * @author sjgar
  */
-public class FactPalomitas extends FactComida {
+public class FactPalomita extends FactComida {
     
-    Comida palomitas;
     
     public String factoryMethod(String aderezo) {
+        Palomitas palomitas;
         if("mantequilla".equals(aderezo)){
             palomitas =  new PalomitasMantequilla();
             return palomitas.crearComida();
@@ -27,15 +27,13 @@ public class FactPalomitas extends FactComida {
             palomitas = new PalomitasCaramelo();
             return palomitas.crearComida();
         }
-        else{
+        else if("mix".equals(aderezo)){
             palomitas = new PalomitasMix();
             return palomitas.crearComida();
         }
-    }
-
-    @Override
-    public String factoryMethod() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        else{
+            return "El tipo de palomitas seleccionado no existe";
+        }
     }
     
 }

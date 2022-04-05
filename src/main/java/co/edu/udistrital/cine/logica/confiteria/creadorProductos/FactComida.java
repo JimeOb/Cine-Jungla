@@ -11,8 +11,8 @@ package co.edu.udistrital.cine.logica.confiteria.creadorProductos;
  */
 public abstract class FactComida {
     
-    public String ComidaConfiteriaFact(){
-        return factoryMethod();
+    public String ComidaConfiteriaFact(String comida){
+        return factoryMethod(comida);
     }
-public abstract String factoryMethod();
+public abstract String factoryMethod(String comida);
 }

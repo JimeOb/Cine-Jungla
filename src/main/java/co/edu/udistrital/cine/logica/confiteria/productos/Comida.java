@@ -12,5 +12,6 @@ package co.edu.udistrital.cine.logica.confiteria.productos;
  * @author sjgar
  */
 public interface Comida {
+    
     public String crearComida();
 }
