@@ -49,4 +49,27 @@ public class ClienteTest {
         
         Assertions.assertEquals(0, cliente.getPuntos());
     }
+    
+    @Test
+    public void noTicketsShouldBeGivenToClient() {
+        cliente.setPuntos(95);
+        
+        Assertions.assertTrue( cliente.getBoletasPremio().isEmpty());
+    }
+    
+    @Test
+    public void oneTicketShouldBeGivedToClient() {
+        cliente.setPuntos(95);
+        cliente.addPoints(20);
+        
+        Assertions.assertEquals(1, cliente.getBoletasPremio().size());
+    }
+    
+    @Test
+    public void moreTicketsShouldBeGivedToClientIfHeAccumulateALotOfPoints() {
+        cliente.setPuntos(95);
+        cliente.addPoints(205);
+        
+        Assertions.assertEquals(3, cliente.getBoletasPremio().size());
+    }
 }

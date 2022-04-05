@@ -1,5 +1,6 @@
 package co.edu.udistrital.persistencia;
 
+import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -44,6 +45,7 @@ public class HibernateSession {
     private static Metadata generateMetaData(ServiceRegistry registry) {
         return new MetadataSources(registry)
                 .addAnnotatedClass(Cliente.class)
+                .addAnnotatedClass(BoletaPremio.class)
                 .buildMetadata();
     }
 
