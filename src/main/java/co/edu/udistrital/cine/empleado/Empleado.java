@@ -13,12 +13,14 @@ import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 import org.hibernate.annotations.NaturalId;
 
 @Entity
 @Table(name = "empleados")
 @Data
 @AllArgsConstructor
+@NoArgsConstructor
 public class Empleado extends User {
 
     @Id

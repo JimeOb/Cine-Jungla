@@ -1,15 +1,16 @@
 package co.edu.udistrital.cine.session;
 
-import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.logica.clientes.Credentials;
 import co.edu.udistrital.cine.logica.clientes.User;
 import co.edu.udistrital.persistencia.Repository;
 import java.util.List;
 import java.util.Optional;
+import lombok.Data;
 
+@Data
 public class SessionService {
 
-    private final Repository repository;
+    private Repository repository;
     private final AppSession appSession;
             
     public SessionService(Repository repository, AppSession appSession) {

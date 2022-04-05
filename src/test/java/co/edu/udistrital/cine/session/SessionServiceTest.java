@@ -1,5 +1,7 @@
 package co.edu.udistrital.cine.session;
 
+import co.edu.udistrital.cine.empleado.Cargo;
+import co.edu.udistrital.cine.empleado.Empleado;
 import co.edu.udistrital.cine.logica.clientes.ClientBuilder;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.logica.clientes.Credentials;
@@ -22,6 +24,9 @@ public class SessionServiceTest {
 
     @Mock
     private Repository<Cliente> repoClientes;        
+    
+    @Mock
+    private Repository<Empleado> repoEmpleados;
     
     @Mock
     private AppSession appSession;
@@ -74,5 +79,21 @@ public class SessionServiceTest {
         
         verify(appSession).setLoggedUser(Optional.ofNullable(null));
         
+    }
+    
+    @Test
+    public void empleadoShouldCanLoginInTheApp() {
+                
+        service.setRepository(repoEmpleados);
+        
+        when(repoEmpleados
+                .findByCriteria(anyString()))
+                .thenReturn(List.of(new Empleado()));
+        
+        service.login(user);
+        
+        ArgumentCaptor<Optional<User>> argument = ArgumentCaptor.forClass(Optional.class);
+        verify(appSession).setLoggedUser(argument.capture());
+        Assertions.assertEquals(user, argument.getValue().get());
     }
 }
