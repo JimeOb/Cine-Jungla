@@ -10,8 +10,8 @@ import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import java.time.Clock;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
-import java.util.stream.IntStream;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -48,5 +48,9 @@ public class Cliente extends User {
         boleta.setCliente(this);
         
         boletasPremio.add(boleta);
+    }
+    
+    public Iterator<BoletaPremio> getBoletasPremio() {
+        return boletasPremio.iterator();
     }
 }

@@ -1,5 +1,6 @@
 package co.edu.udistrital.cine.logica.clientes;
 
+import java.util.Iterator;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
@@ -54,7 +55,7 @@ public class ClienteTest {
     public void noTicketsShouldBeGivenToClient() {
         cliente.setPuntos(95);
         
-        Assertions.assertTrue( cliente.getBoletasPremio().isEmpty());
+        Assertions.assertFalse( cliente.getBoletasPremio().hasNext());
     }
     
     @Test
@@ -62,7 +63,9 @@ public class ClienteTest {
         cliente.setPuntos(95);
         cliente.addPoints(20);
         
-        Assertions.assertEquals(1, cliente.getBoletasPremio().size());
+        final int cantidadBoletas = contarBoletas();       
+        
+        Assertions.assertEquals(1, cantidadBoletas);
     }
     
     @Test
@@ -70,6 +73,19 @@ public class ClienteTest {
         cliente.setPuntos(95);
         cliente.addPoints(205);
         
-        Assertions.assertEquals(3, cliente.getBoletasPremio().size());
+        final int cantidadBoletas = contarBoletas();
+        
+        Assertions.assertEquals(3, cantidadBoletas);
+    }
+    
+    private int contarBoletas() {
+        
+        int cantidadBoletas;        
+        final Iterator<BoletaPremio> boletas = cliente.getBoletasPremio();
+        
+        for(cantidadBoletas = 0; boletas.hasNext(); ++cantidadBoletas)
+            boletas.next();
+        
+        return cantidadBoletas;
     }
 }
