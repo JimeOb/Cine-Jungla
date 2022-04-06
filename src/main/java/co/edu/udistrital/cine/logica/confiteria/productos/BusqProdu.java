@@ -15,9 +15,9 @@ import java.util.List;
  */
 public class BusqProdu {
     
-    Repository<ProductosMultiplex> repo = new Repository(ProductosMultiplex.class);
-    List<ProductosMultiplex> cons = new ArrayList();
-    Comida comida;
+    private Repository<ProductosMultiplex> repo = new Repository(ProductosMultiplex.class);
+    private List<ProductosMultiplex> cons = new ArrayList();
+    private Comida comida;
     
     public List<ProductosMultiplex> busPorMult(Integer multi){
        cons = repo.findByCriteria("id_multiplex = '" + multi +"'");
