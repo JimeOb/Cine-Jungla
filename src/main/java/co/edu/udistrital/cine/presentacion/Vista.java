@@ -513,7 +513,7 @@ public class Vista extends javax.swing.JFrame {
     }
 
     public JButton getBtnAñadirProductos() {
-        return btnAñadirProductos;
+        return btnAnadirProductos;
     }
 
     public JButton getBtnCarteleraEmpleado() {
@@ -871,7 +871,7 @@ public class Vista extends javax.swing.JFrame {
         jcNombCom = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
-        btnAñadirProductos = new javax.swing.JButton();
+        btnAnadirProductos = new javax.swing.JButton();
         btnIraPagarComida = new javax.swing.JButton();
         asdfwgvcasfvasf11 = new javax.swing.JLabel();
         asdfwgvcasfvasf12 = new javax.swing.JLabel();
@@ -1364,10 +1364,10 @@ public class Vista extends javax.swing.JFrame {
         jLabel16.setText("IMAGEN");
         pnConfiteria.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
-        btnAñadirProductos.setBackground(new java.awt.Color(204, 204, 204));
-        btnAñadirProductos.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
-        btnAñadirProductos.setText("Añadir al carrito");
-        pnConfiteria.add(btnAñadirProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 210, 50));
+        btnAnadirProductos.setBackground(new java.awt.Color(204, 204, 204));
+        btnAnadirProductos.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
+        btnAnadirProductos.setText("Añadir al carrito");
+        pnConfiteria.add(btnAnadirProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 210, 50));
 
         btnIraPagarComida.setBackground(new java.awt.Color(102, 255, 51));
         btnIraPagarComida.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
@@ -1480,7 +1480,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel asdfwgvcasfvasf8;
     private javax.swing.JLabel asdgvaxdsdefs;
     private javax.swing.JLabel asdgvaxdsdefs1;
-    private javax.swing.JButton btnAñadirProductos;
+    private javax.swing.JButton btnAnadirProductos;
     private javax.swing.JButton btnCarteleraEmpleado;
     private javax.swing.JButton btnComprarBoletos;
     private javax.swing.JButton btnComprarComida;
