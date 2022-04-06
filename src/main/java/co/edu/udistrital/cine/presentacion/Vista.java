@@ -1,9 +1,11 @@
 package co.edu.udistrital.cine.presentacion;
 
 import javax.swing.JPanel;
+import lombok.Getter;
 import lombok.Setter;
 
 @Setter
+@Getter
 public class Vista extends javax.swing.JFrame {
 
     private PnRegistro pnRegistro;

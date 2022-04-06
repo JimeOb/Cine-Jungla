@@ -19,7 +19,7 @@ public class SessionHandler implements RequestHandler {
     }
 
     @Override
-    public void process(String request, Object requestData) {
+    public Response process(String request, Object requestData) {
 
         switch(request) {
             case "iniciarSesion": 
@@ -29,9 +29,10 @@ public class SessionHandler implements RequestHandler {
                 sessionService.logout();
             case "validate": 
                 validateSession(request, requestData);
-                break;
+                break;            
         }
         
+        return new Response();        
     }
     
     private void validateSession(String request, Object requestData) {
