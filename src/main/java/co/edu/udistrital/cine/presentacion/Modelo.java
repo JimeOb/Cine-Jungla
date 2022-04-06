@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package co.edu.udistrital.cine.presentacion;
 
 import co.edu.udistrital.cine.logica.confiteria.creadorProductos.FactAlimento;
@@ -11,71 +7,34 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
 
-/**
- *
- * @author USER
- */
+
 public class Modelo {
 
-    private static Modelo instance;
-
-    private VistaSillas vistaSillas;
-    private VistaMain vistaMain;
-    private VistaMultiplex vistaMultiplex;
-    private VistaConfiteria vistaConfiteria;
+    private Vista ventana;
+    private FactAlimento comida;
     
-    private Modelo() {
-        vistaSillas = new VistaSillas();
-        vistaMain = new VistaMain();
-        vistaMultiplex = new VistaMultiplex();
-        vistaConfiteria = new VistaConfiteria();
-    }
-
-    public static Modelo getInstance() {
-        if (instance == null) {
-            instance = new Modelo();
-        }
-        return instance;
-    }
-
-    public VistaSillas getVistaSillas() {
-        return vistaSillas;
-    }
-
-    public VistaMain getVistaMain() {
-        return vistaMain;
-    }
-
-    public VistaMultiplex getVistaMultiplex() {
-        return vistaMultiplex;
-    }
-    public VistaConfiteria getVistaConfiteria(){
-        return vistaConfiteria;
+    public Vista getVentana() {
+        if (ventana == null)
+            ventana = new Vista(this);
+        return ventana;
     }
 
     public void iniciar() {
-        vistaMain.setVisible(true);
-        
+        getVentana().setVisible(true);
+        getVentana().setSize(810, 650);
     }
     
-    
-    
-    
-    
-    private FactAlimento comida = new FactAlimento();
-    
-    List<Comida> cons = new ArrayList();
-    
-    public void llenarProductos(){
+      public void llenarProductos(){
+        List<Comida> cons = new ArrayList();
         jcNombCom.removeAllItems();
         cons = comida.verStock();
         
         for(int i = 0;i<cons.size(); i++){
             jcNombCom.addItem(cons.get(i).getNombre());
         }
-    }
+      }  
     
-    public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom){
+         public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom){
         jcCantCom.removeAllItems();
 
         cons = comida.verStock();
@@ -93,6 +52,5 @@ public class Modelo {
     public void cambiarImg(JComboBox jcNombCom, Label lbImg){
         
     }
-    
 
 }
