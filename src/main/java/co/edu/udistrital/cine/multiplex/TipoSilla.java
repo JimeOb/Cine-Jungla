@@ -1,4 +1,4 @@
-package co.edu.udistrital.cine.logica;
+package co.edu.udistrital.cine.multiplex;
 
 public enum TipoSilla {
     PREFERENCIAL,

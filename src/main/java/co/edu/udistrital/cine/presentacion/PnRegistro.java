@@ -5,14 +5,14 @@ import lombok.Data;
 @Data
 public class PnRegistro extends javax.swing.JPanel {
 
-    private Controlador control;
+    private ControllerRegistro control;
+    private Vista vista;
     
-    public PnRegistro() {
+    public PnRegistro(Vista vista) {
         initComponents();
+        this.vista = vista;
     }
-
-
-
+    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 

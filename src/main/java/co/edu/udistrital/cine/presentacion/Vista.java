@@ -13,15 +13,8 @@ import lombok.Data;
 @Data
 public class Vista extends javax.swing.JFrame {
 
-    
-    private final Modelo modelo;
-    private Controlador control;
-    
-    
-      public Vista(Modelo m) {
-      modelo = m;
+    public Vista() {
       initComponents();
-      capturarEventos();
       setLocationRelativeTo(null);
       setTitle("Cine Jungla Services");
       setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -86,10 +79,4 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField jtxUsuario1;
     private javax.swing.JPanel pnInfo;
     // End of variables declaration//GEN-END:variables
-
-    private void capturarEventos() {
- 
-        
-        
-    }
 }

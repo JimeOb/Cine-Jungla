@@ -1,42 +1,40 @@
-package co.edu.udistrital.cine.logica;
+package co.edu.udistrital.cine.multiplex;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.EnumType;
+import jakarta.persistence.Enumerated;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
 @Entity
-@Table(name = "id_sala")
+@Table(name = "sillas")
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Sala {
-
+public class Silla {
+    
     @Id
-    @Column(name = "id_sala")
+    @Column(name = "id_silla")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     
-    @Column(name = "numero_sala")
-    private Integer numeroSala;
-    
-    @Column(name = "capacidad")
-    private Integer capacidad;
+    @Column(name = "numero_silla")
+    private Integer numeroSilla;
     
     @ManyToOne
-    @JoinColumn(name = "id_multiplex")
-    private Multiplex multiplex;
+    @JoinColumn(name = "id_sala")
+    private Sala sala;
     
-    @OneToMany(mappedBy = "sala")
-    private List<Silla> sillas;
+    @Enumerated(EnumType.STRING)
+    @Column(name = "tipo_silla")
+    private TipoSilla tipoSilla;
     
 }

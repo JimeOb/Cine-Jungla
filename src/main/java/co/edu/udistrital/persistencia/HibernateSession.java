@@ -2,9 +2,9 @@ package co.edu.udistrital.persistencia;
 
 import co.edu.udistrital.cine.empleado.Contrato;
 import co.edu.udistrital.cine.empleado.Empleado;
-import co.edu.udistrital.cine.logica.Multiplex;
-import co.edu.udistrital.cine.logica.Sala;
-import co.edu.udistrital.cine.logica.Silla;
+import co.edu.udistrital.cine.multiplex.Multiplex;
+import co.edu.udistrital.cine.multiplex.Sala;
+import co.edu.udistrital.cine.multiplex.Silla;
 import co.edu.udistrital.cine.logica.clientes.BoletaPremio;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.peliculas.HorariosPelicula;

@@ -1,6 +1,6 @@
 package co.edu.udistrital.cine.peliculas;
 
-import co.edu.udistrital.cine.logica.Silla;
+import co.edu.udistrital.cine.multiplex.Silla;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.persistencia.Repository;
 import java.util.Iterator;

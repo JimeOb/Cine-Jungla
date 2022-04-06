@@ -5,7 +5,7 @@
  */
 package co.edu.udistrital.cine.logica.confiteria.productos;
 
-import co.edu.udistrital.cine.logica.Multiplex;
+import co.edu.udistrital.cine.multiplex.Multiplex;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;

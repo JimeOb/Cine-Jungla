@@ -1,4 +1,4 @@
-package co.edu.udistrital.cine.logica;
+package co.edu.udistrital.cine.multiplex;
 
 import co.edu.udistrital.cine.empleado.Empleado;
 import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;

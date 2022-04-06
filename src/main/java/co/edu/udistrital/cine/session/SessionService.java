@@ -29,6 +29,10 @@ public class SessionService {
         appSession.setLoggedUser(Optional.ofNullable(null));
     }
     
+    public boolean aa() {
+        return appSession.isActive();
+    }
+    
     private boolean validateCredentials(Credentials credentials) {
         
         List<User> user = repository.findByCriteria(String.format("credentials.email = '%s' AND credentials.password = '%s'", 

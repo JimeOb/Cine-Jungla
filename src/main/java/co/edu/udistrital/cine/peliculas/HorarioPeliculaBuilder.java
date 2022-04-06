@@ -1,6 +1,6 @@
 package co.edu.udistrital.cine.peliculas;
 
-import co.edu.udistrital.cine.logica.Sala;
+import co.edu.udistrital.cine.multiplex.Sala;
 import java.time.LocalDateTime;
 
 public class HorarioPeliculaBuilder {

@@ -1,6 +1,6 @@
 package co.edu.udistrital.cine.ventas;
 
-import co.edu.udistrital.cine.logica.Multiplex;
+import co.edu.udistrital.cine.multiplex.Multiplex;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
