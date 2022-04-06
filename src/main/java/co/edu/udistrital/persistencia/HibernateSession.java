@@ -12,6 +12,9 @@ import co.edu.udistrital.cine.peliculas.Pelicula;
 import co.edu.udistrital.cine.peliculas.Reservacion;
 import co.edu.udistrital.cine.peliculas.ValoracionPelicula;
 import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
+import co.edu.udistrital.cine.ventas.ProductoVenta;
+import co.edu.udistrital.cine.ventas.ProductoVentaIdentity;
+import co.edu.udistrital.cine.ventas.Venta;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -66,6 +69,9 @@ public class HibernateSession {
                 .addAnnotatedClass(Pelicula.class)
                 .addAnnotatedClass(ValoracionPelicula.class)
                 .addAnnotatedClass(Comida.class)
+                .addAnnotatedClass(Venta.class)
+                .addAnnotatedClass(ProductoVenta.class)
+                .addAnnotatedClass(ProductoVentaIdentity.class)
                 .buildMetadata();
     }
 

@@ -37,7 +37,7 @@ public class ValoracionesPeliculasService {
         repository.update(valoracion);
     }
     
-    public void delteValoracion(ValoracionPelicula valoracion) {
+    public void deleteValoracion(ValoracionPelicula valoracion) {
         repository.delete(valoracion.getId());
     }
     
