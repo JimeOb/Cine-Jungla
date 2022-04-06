@@ -23,7 +23,7 @@ public class Modelo {
         getVentana().setVisible(true);
         getVentana().setSize(810, 650);
     }
-    
+    /*
       public void llenarProductos(){
         List<Comida> cons = new ArrayList();
         jcNombCom.removeAllItems();
@@ -34,7 +34,7 @@ public class Modelo {
         }
       }  
     
-         public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom){
+     public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom){
         jcCantCom.removeAllItems();
 
         cons = comida.verStock();
@@ -52,5 +52,5 @@ public class Modelo {
     public void cambiarImg(JComboBox jcNombCom, Label lbImg){
         
     }
-
+*/
 }

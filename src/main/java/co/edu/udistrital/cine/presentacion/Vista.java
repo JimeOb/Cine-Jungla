@@ -892,7 +892,8 @@ public class Vista extends javax.swing.JFrame {
         pnPrincipal.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 210, 50));
 
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel4.setText("IMAGEN");
+        jLabel4.setToolTipText("");
         pnPrincipal.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 530, 200));
 
         jtxUsuario.setBackground(new java.awt.Color(204, 204, 204));
@@ -917,7 +918,8 @@ public class Vista extends javax.swing.JFrame {
         pnOpcionesCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel8.setText("IMAGEN");
+        jLabel8.setToolTipText("");
         pnOpcionesCliente.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         btnVerestado.setBackground(new java.awt.Color(238, 28, 28));
@@ -946,40 +948,41 @@ public class Vista extends javax.swing.JFrame {
         pnPelicula.setLayout(null);
 
         jbPelicula1.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara1.jpg"))); // NOI18N
+        jbPelicula1.setText("PELICULA1");
         pnPelicula.add(jbPelicula1);
         jbPelicula1.setBounds(60, 140, 180, 290);
 
         jbPelicula3.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara3.jpg"))); // NOI18N
+        jbPelicula3.setText("PELICULA3");
         pnPelicula.add(jbPelicula3);
         jbPelicula3.setBounds(560, 140, 190, 290);
 
         jbPelicula4.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara4.jpg"))); // NOI18N
+        jbPelicula4.setText("PELICULA4");
+        jbPelicula4.setToolTipText("");
         pnPelicula.add(jbPelicula4);
         jbPelicula4.setBounds(50, 460, 190, 300);
 
         jbPelicula5.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara6.jpg"))); // NOI18N
+        jbPelicula5.setText("PELICULA5");
         jbPelicula5.setToolTipText("");
         pnPelicula.add(jbPelicula5);
         jbPelicula5.setBounds(300, 460, 190, 300);
 
         jbPelicula6.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara5.jpg"))); // NOI18N
+        jbPelicula6.setText("PELICULA6");
         pnPelicula.add(jbPelicula6);
         jbPelicula6.setBounds(560, 460, 190, 300);
 
         jlTittle.setBackground(new java.awt.Color(0, 0, 0));
         jlTittle.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jlTittle.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTittle.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jlTittle.setText("IMAGEN");
         pnPelicula.add(jlTittle);
         jlTittle.setBounds(200, 0, 420, 120);
 
         jbPelicula2.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
-        jbPelicula2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/cara2.jpg"))); // NOI18N
+        jbPelicula2.setText("PELICULA2");
         pnPelicula.add(jbPelicula2);
         jbPelicula2.setBounds(300, 140, 190, 290);
 
@@ -1151,7 +1154,7 @@ public class Vista extends javax.swing.JFrame {
         jlTittle1.setBackground(new java.awt.Color(0, 0, 0));
         jlTittle1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jlTittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jlTittle1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jlTittle1.setText("IMAGEN");
         pnHorarios.add(jlTittle1);
         jlTittle1.setBounds(200, 30, 420, 120);
 
@@ -1215,7 +1218,7 @@ public class Vista extends javax.swing.JFrame {
         pnOpcionesEmpleado.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel11.setText("IAMGEN");
         pnOpcionesEmpleado.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         btnCarteleraEmpleado.setBackground(new java.awt.Color(238, 28, 28));
@@ -1234,7 +1237,7 @@ public class Vista extends javax.swing.JFrame {
         pnDetalle.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel13.setText("IAMGEN");
         pnDetalle.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         btnIraPagar.setBackground(new java.awt.Color(0, 204, 51));
@@ -1280,7 +1283,7 @@ public class Vista extends javax.swing.JFrame {
         pnEstadoCliente.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel14.setText("IAMGEN");
         pnEstadoCliente.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         lbNombreCliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -1315,7 +1318,7 @@ public class Vista extends javax.swing.JFrame {
         pnEmpleadoCarteleraReportes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel15.setText("IMAGNE");
         pnEmpleadoCarteleraReportes.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         lbNomMultiplexEmpleado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -1358,7 +1361,7 @@ public class Vista extends javax.swing.JFrame {
         pnConfiteria.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 220, 90, 50));
 
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel16.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
+        jLabel16.setText("IMAGEN");
         pnConfiteria.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
         btnAñadirProductos.setBackground(new java.awt.Color(204, 204, 204));
