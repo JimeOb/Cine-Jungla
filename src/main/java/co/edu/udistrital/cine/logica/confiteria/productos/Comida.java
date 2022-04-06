@@ -7,7 +7,6 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import java.util.ArrayList;
 import java.util.List;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -32,7 +31,5 @@ public class Comida {
     private Integer precio;
     @OneToMany(mappedBy = "comida")
     private List<ProductosMultiplex> productos;
-    @Column
-    private String ruta;
    
 }

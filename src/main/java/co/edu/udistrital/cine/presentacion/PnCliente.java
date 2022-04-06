@@ -1,5 +1,6 @@
 package co.edu.udistrital.cine.presentacion;
 
+import javax.swing.JPanel;
 import lombok.Data;
 
 @Data
@@ -10,8 +11,6 @@ public class PnCliente extends javax.swing.JPanel {
     }
 
 
-    
-    
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -35,8 +34,17 @@ public class PnCliente extends javax.swing.JPanel {
         btnComprarConfiteria.setBackground(new java.awt.Color(238, 28, 28));
         btnComprarConfiteria.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnComprarConfiteria.setText("Comprar comida");
+        btnComprarConfiteria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnComprarConfiteriaActionPerformed(evt);
+            }
+        });
         add(btnComprarConfiteria, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 210, 250, 90));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnComprarConfiteriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprarConfiteriaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnComprarConfiteriaActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

@@ -15,6 +15,7 @@ public class PnConfiteria extends javax.swing.JPanel {
     private FactAlimento comida;
     private List<Comida> cons;
     private List<ProductosMultiplex> consCant;
+    private List<Integer> cantidad;
     private BusqProdu busq;
 
     public PnConfiteria() {
@@ -31,7 +32,7 @@ public class PnConfiteria extends javax.swing.JPanel {
         }
       }  
     
-     public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom, Integer multiplex){
+    public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom, Integer multiplex){
         jcCantCom.removeAllItems();
         cons = comida.verProductos();
         
@@ -45,6 +46,18 @@ public class PnConfiteria extends javax.swing.JPanel {
             }
         }
     }
+    
+    public List<Integer> cantidadProduc(JComboBox jcCantCom, List<Integer> cantidad){
+        cantidad.add(Integer.parseInt(jcCantCom.getSelectedItem().toString()));
+        return cantidad;
+    }
+    
+    public List<Comida> productos(JComboBox jcNombCom){
+        cons.add(comida.verProductosP(jcNombCom.getSelectedItem().toString()).get(0));
+        return cons;
+    }
+    
+     
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -71,6 +84,11 @@ public class PnConfiteria extends javax.swing.JPanel {
         btnAnadirProductos.setBackground(new java.awt.Color(204, 204, 204));
         btnAnadirProductos.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnAnadirProductos.setText("Añadir al carrito");
+        btnAnadirProductos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAnadirProductosActionPerformed(evt);
+            }
+        });
         add(btnAnadirProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 539, 210, 50));
 
         btnIraPagarComida.setBackground(new java.awt.Color(102, 255, 51));
@@ -113,6 +131,10 @@ public class PnConfiteria extends javax.swing.JPanel {
         lbNommultiplex.setText("Id_multiplex");
         add(lbNommultiplex, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 320, 20));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnAnadirProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirProductosActionPerformed
+    this.productos(jcNombCom);
+    }//GEN-LAST:event_btnAnadirProductosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

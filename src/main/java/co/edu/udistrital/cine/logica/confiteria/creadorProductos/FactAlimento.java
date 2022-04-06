@@ -57,6 +57,10 @@ public class FactAlimento {
     public List<Comida> verProductos(){
         return repo.findAll();
     }
-
+    
+    public List<Comida> verProductosP(String nombre){
+        return repo.findByCriteria("nombre = '"+nombre+"'");
+    }
+    
     
 }
