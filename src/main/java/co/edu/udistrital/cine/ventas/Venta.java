@@ -38,6 +38,4 @@ public class Venta {
     @JoinColumn(name = "id_multiplex")
     private Multiplex multiplex;
     
-    
-    
 }

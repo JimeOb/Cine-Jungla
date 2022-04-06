@@ -4,6 +4,7 @@ import co.edu.udistrital.cine.logica.clientes.Cliente;
 import co.edu.udistrital.cine.logica.clientes.ClienteService;
 import co.edu.udistrital.cine.handlers.ClientHandler;
 import co.edu.udistrital.cine.handlers.SessionHandler;
+import co.edu.udistrital.cine.logica.clientes.ClientBuilder;
 import co.edu.udistrital.cine.presentacion.ControllerRegistro;
 import co.edu.udistrital.cine.presentacion.PnRegistro;
 import co.edu.udistrital.cine.presentacion.Vista;
@@ -19,24 +20,41 @@ public class Launcher{
     
     public static void main(String[] args){
         final Launcher app = new Launcher();
-        app.initialize();
+        app.run();
     }
     
-    public void initialize() {
+    public void run() {
         HibernateSession.initialize();
-        vista = new Vista();
+        vista = new Vista();        
+        initializeComponents();
     }
     
-    private void initializeRepositories() {
-        Repository<Cliente> repoClientes = new Repository(Cliente.class);
-        ClienteService clienteService = new ClienteService(repoClientes);
-        ClientHandler clienteHandler = new ClientHandler(clienteService);
+    private void initializeComponents() {
+        //Sesion
+        AppSession appSession = new AppSession(Clock.systemDefaultZone());        
         
-        AppSession appSession = new AppSession(Clock.systemDefaultZone());
+        //Repositories
+        Repository<Cliente> repoClientes = new Repository(Cliente.class);
+        
+        //builders
+        ClientBuilder clientBuilder = new ClientBuilder();
+        
+        //Services
+        ClienteService clienteService = new ClienteService(repoClientes);
         SessionService sessionService = new SessionService(repoClientes, appSession);
+        
+        //Handlers
+        ClientHandler clienteHandler = new ClientHandler(clienteService);
         SessionHandler sessionHandler = new SessionHandler(sessionService);
         
-        PnRegistro pnRegistro = new PnRegistro(vista);
-        ControllerRegistro registroController = new ControllerRegistro(clienteHandler, pnRegistro);
+        //Controllers
+        ControllerRegistro registroController = new ControllerRegistro(clienteHandler, clientBuilder);
+        
+        //Paneles
+        PnRegistro pnRegistro = new PnRegistro(vista, registroController);     
+        registroController.registerPnRegistro(pnRegistro);
+        
+        
+        vista.setPnRegistro(pnRegistro);
     }
 }

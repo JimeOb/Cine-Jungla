@@ -1,25 +1,21 @@
 package co.edu.udistrital.cine.presentacion;
 
-import javax.swing.JButton;
-import javax.swing.JComboBox;
-import javax.swing.JLabel;
 import javax.swing.JPanel;
-import javax.swing.JPasswordField;
-import javax.swing.JRadioButton;
-import javax.swing.JTable;
-import javax.swing.JTextField;
-import lombok.Data;
+import lombok.Setter;
 
-@Data
+@Setter
 public class Vista extends javax.swing.JFrame {
 
+    private PnRegistro pnRegistro;
+    
     public Vista() {
-      initComponents();
-      setLocationRelativeTo(null);
-      setTitle("Cine Jungla Services");
-      setDefaultCloseOperation(EXIT_ON_CLOSE);
+        initComponents();
+        setLocationRelativeTo(null);
+        setTitle("Cine Jungla Services");
+        setDefaultCloseOperation(EXIT_ON_CLOSE);
+        setSize(800, 800);
+        setVisible(true);        
     }
-
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -34,7 +30,7 @@ public class Vista extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        getContentPane().setLayout(new java.awt.FlowLayout());
 
         pnInfo.setBackground(new java.awt.Color(255, 255, 255));
         pnInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -48,7 +44,6 @@ public class Vista extends javax.swing.JFrame {
         pnInfo.add(jtxUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 290, 40));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
         jLabel11.setToolTipText("");
         pnInfo.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 530, 200));
 
@@ -68,12 +63,21 @@ public class Vista extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(102, 153, 255));
         jButton1.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jButton1.setText("Registrar Usuario");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         pnInfo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, 180, 40));
 
-        getContentPane().add(pnInfo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 650));
+        getContentPane().add(pnInfo);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        changePanel(pnRegistro);
+    }//GEN-LAST:event_jButton1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -86,4 +90,11 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JTextField jtxUsuario1;
     private javax.swing.JPanel pnInfo;
     // End of variables declaration//GEN-END:variables
+
+    public void changePanel (JPanel pnl) {
+        getContentPane().removeAll();                 
+        getContentPane().add(pnl);
+        getContentPane().revalidate();
+        getContentPane().repaint();
+    }   
 }

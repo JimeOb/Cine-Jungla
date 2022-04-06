@@ -1,16 +1,20 @@
 package co.edu.udistrital.cine.presentacion;
 
-import lombok.Data;
+import lombok.Getter;
+import lombok.Setter;
 
-@Data
+@Getter
+@Setter
 public class PnRegistro extends javax.swing.JPanel {
 
     private ControllerRegistro control;
     private Vista vista;
     
-    public PnRegistro(Vista vista) {
+    public PnRegistro(Vista vista, ControllerRegistro controller) {
         initComponents();
         this.vista = vista;
+        this.control = controller;        
+        capturarEventos();
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -70,7 +74,7 @@ public class PnRegistro extends javax.swing.JPanel {
 
     private void capturarEventos() {
  
-        
+        btnRegistrar.addActionListener(control);
         
     }
 

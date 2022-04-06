@@ -16,7 +16,7 @@ public class ClienteService {
         if (existEmail(cliente.getEmail())) {
             throw new RegisterException("El email ingresado ya se encuentra registrado.");
         }
-
+        cliente.setRole(Role.Cliente);
         repository.insert(cliente);
     }
 
