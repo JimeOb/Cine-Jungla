@@ -7,9 +7,9 @@ package co.edu.udistrital.cine.logica.confiteria.creadorProductos;
 
 
 import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
+import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;
 import co.edu.udistrital.persistencia.Repository;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 
 
@@ -19,53 +19,39 @@ import java.util.List;
  */
 public class FactAlimento {
     
-    Repository<Comida> repo = new Repository(Comida.class);
-    List<Comida> cons = new ArrayList();
-    Comida comida;
+    Repository<ProductosMultiplex> repoCant = new Repository(ProductosMultiplex.class);
+    List<ProductosMultiplex> consCant = new ArrayList();
+    ProductosMultiplex produCant;
     
-    public List<Comida> entregaComi(List<String> nombre, List<Integer> cant) {
+    public void actualizarComi(List<Comida> comida, Integer multiplex, List<Integer> cantidad) {
         
-     List<Comida> lista = new ArrayList();
-     
-     
-     for(int i = 0;i<=cant.size(); i++){
+        for(int i = 0;i<comida.size(); i++){
          
-           cons = repo.findByCriteria("nombre = '"+ nombre.get(i) + "'");
-           comida = cons.get(0);
-           comida.setCantidad(cant.get(i));
-           lista.add(comida);
-     }
-     return lista;
-     
-    }
-    
-    
-    
-    public List<Comida> verStock(){
-
-        return repo.findAll();
-        
-    }
-    
-    public void rellenarStock(Comida comida){
-        comida.setCantidad(15);
-        repo.update(comida);
-        
-    }
-    
-    public List<String> nomb(){
-        List<String> list = new ArrayList();
-        cons = this.verStock();
-        for(int i = 0;i<=cons.size(); i++){
-            list.add(cons.get(i).getNombre());
+           consCant = repoCant.findByCriteria("id_producto = '"+ comida.get(i).getIdProducto() + "' and id_multiplex = '"+multiplex+"'");
+           produCant = consCant.get(i);
+           produCant.setCantidad(produCant.getCantidad() - (cantidad.get(i)));
         }
+    }
+    
+    public void rellenarStock(Comida comida, Integer multiplex){
+        consCant = repoCant.findByCriteria("id_producto = '"+ comida.getIdProducto() + "' and id_multiplex = '"+multiplex+"'");
+        produCant = consCant.get(0);
+        produCant.setCantidad(15);
+        repoCant.update(produCant);
         
+    }
+    
+    public List<ProductosMultiplex> verStockG(){
+
+        return repoCant.findAll();
         
-        return list;
+    }
+    
+    public List<ProductosMultiplex> verStockP(Integer multiplex){
+
+        return repoCant.findByCriteria("id_multiplex = '"+ multiplex + "'");
+        
     }
 
-    
-    
-    
     
 }
