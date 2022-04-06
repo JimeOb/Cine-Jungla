@@ -1,12 +1,48 @@
 package co.edu.udistrital.cine.presentacion;
 
+import co.edu.udistrital.cine.logica.confiteria.creadorProductos.FactAlimento;
+import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
+import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;
+import java.util.ArrayList;
+import java.util.List;
+import javax.swing.JComboBox;
 import lombok.Data;
 
 @Data
 public class PnConfiteria extends javax.swing.JPanel {
 
+    private FactAlimento comida;
+    private List<Comida> cons;
+    private List<ProductosMultiplex> consCant;
+
     public PnConfiteria() {
         initComponents();
+    }
+    
+    public void llenarProductos(){
+        cons = new ArrayList();
+        cons = comida.verProductos();
+        jcNombCom.removeAllItems();
+        
+        for(int i = 0;i<cons.size(); i++){
+            jcNombCom.addItem(cons.get(i).getNombre());
+        }
+      }  
+    
+     public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom, Integer multiplex){
+        jcCantCom.removeAllItems();
+
+        consCant = comida.verStockP(multiplex);
+        cons = comida.verProductos();
+        
+        for(int i = 0;i<cons.size(); i++){
+            if(jcNombCom.getSelectedItem().toString() == cons.get(i).getNombre()){
+                for(int n = 0;n<=consCant.get(n).getCantidad(); n++){  
+                jcCantCom.addItem(n);
+                }
+            break;
+            }
+        }
     }
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
