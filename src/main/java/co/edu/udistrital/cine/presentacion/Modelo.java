@@ -12,6 +12,7 @@ public class Modelo {
 
     private Vista ventana;
     private FactAlimento comida;
+    private List<Comida> cons;
     
     public Vista getVentana() {
         if (ventana == null)
@@ -25,9 +26,9 @@ public class Modelo {
     }
     /*
       public void llenarProductos(){
-        List<Comida> cons = new ArrayList();
+        cons = new ArrayList();
         jcNombCom.removeAllItems();
-        cons = comida.verStock();
+        cons = comida.verProductos();
         
         for(int i = 0;i<cons.size(); i++){
             jcNombCom.addItem(cons.get(i).getNombre());
@@ -37,7 +38,7 @@ public class Modelo {
      public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom){
         jcCantCom.removeAllItems();
 
-        cons = comida.verStock();
+        cons = comida.verProductos();
         
         for(int i = 0;i<cons.size(); i++){
             if(jcNombCom.getSelectedItem().toString() == cons.get(i).getNombre()){

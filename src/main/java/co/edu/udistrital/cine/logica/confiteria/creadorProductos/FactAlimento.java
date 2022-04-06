@@ -19,9 +19,10 @@ import java.util.List;
  */
 public class FactAlimento {
     
-    Repository<ProductosMultiplex> repoCant = new Repository(ProductosMultiplex.class);
-    List<ProductosMultiplex> consCant = new ArrayList();
-    ProductosMultiplex produCant;
+    private Repository<ProductosMultiplex> repoCant = new Repository(ProductosMultiplex.class);
+    private Repository<Comida> repo = new Repository(Comida.class);
+    private List<ProductosMultiplex> consCant = new ArrayList();
+    private ProductosMultiplex produCant;
     
     public void actualizarComi(List<Comida> comida, Integer multiplex, List<Integer> cantidad) {
         
@@ -51,6 +52,10 @@ public class FactAlimento {
 
         return repoCant.findByCriteria("id_multiplex = '"+ multiplex + "'");
         
+    }
+    
+    public List<Comida> verProductos(){
+        return repo.findAll();
     }
 
     
