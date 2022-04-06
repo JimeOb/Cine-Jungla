@@ -2,14 +2,21 @@ package co.edu.udistrital.cine.ventas;
 
 import co.edu.udistrital.cine.multiplex.Multiplex;
 import co.edu.udistrital.cine.logica.clientes.Cliente;
+import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
 import java.time.LocalDate;
+import java.util.List;
 
 public class VentaBuilder {
 
     private Venta venta;
+    private ProductoVentaIdentity produVentaIden;
+    private ProductoVenta produVenta;
 
     public VentaBuilder() {
         venta = new Venta();
+        produVenta = new ProductoVenta();
+        produVentaIden = new ProductoVentaIdentity();
+        
     }
 
     public VentaBuilder addId(Integer id) {
@@ -29,6 +36,10 @@ public class VentaBuilder {
     
     public VentaBuilder addMultiplex(Multiplex multiplex) {
         venta.setMultiplex(multiplex);
+        return this;
+    }
+    public VentaBuilder addProductos(List<Comida> productos){
+        venta.setProductos(productos);
         return this;
     }
     
