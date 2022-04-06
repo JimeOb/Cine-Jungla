@@ -38,10 +38,15 @@ public class ControllerRegistro implements ActionListener {
         if (response.isError()) {
             JOptionPane.showMessageDialog(pnRegistro, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
         } else {
+            pnRegistro.getJtxEmail().setText("");
+            pnRegistro.getJtxNombre().setText("");
+            pnRegistro.getJtxContrasena().setText("");
+
             JOptionPane.showMessageDialog(pnRegistro, mensaje);
             pnRegistro
                     .getVista()
                     .changePanel(pnRegistro.getVista().getPnInfo());
+            
         }
     }
 
