@@ -512,7 +512,7 @@ public class Vista extends javax.swing.JFrame {
         this.P9 = P9;
     }
 
-    public JButton getBtnAñadirProductos() {
+    public JButton getBtnAnadirProductos() {
         return btnAnadirProductos;
     }
 
@@ -636,8 +636,8 @@ public class Vista extends javax.swing.JFrame {
         return jtEmpleado;
     }
 
-    public JPasswordField getJtxContraseña() {
-        return jtxContraseña;
+    public JPasswordField getJtxContrasena() {
+        return jtxContrasena;
     }
 
     public JTextField getJtxUsuario() {
@@ -738,7 +738,7 @@ public class Vista extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jtxUsuario = new javax.swing.JTextField();
-        jtxContraseña = new javax.swing.JPasswordField();
+        jtxContrasena = new javax.swing.JPasswordField();
         btnIniciar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         pnOpcionesCliente = new javax.swing.JPanel();
@@ -899,8 +899,8 @@ public class Vista extends javax.swing.JFrame {
         jtxUsuario.setBackground(new java.awt.Color(204, 204, 204));
         pnPrincipal.add(jtxUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 290, 40));
 
-        jtxContraseña.setBackground(new java.awt.Color(204, 204, 204));
-        pnPrincipal.add(jtxContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 290, 40));
+        jtxContrasena.setBackground(new java.awt.Color(204, 204, 204));
+        pnPrincipal.add(jtxContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 290, 40));
 
         btnIniciar.setBackground(new java.awt.Color(238, 28, 28));
         btnIniciar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
@@ -1530,7 +1530,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jlTittle1;
     private javax.swing.JTable jtConfiteria;
     private javax.swing.JTable jtEmpleado;
-    private javax.swing.JPasswordField jtxContraseña;
+    private javax.swing.JPasswordField jtxContrasena;
     private javax.swing.JTextField jtxUsuario;
     private javax.swing.JLabel lbNomMultiplexEmpleado;
     private javax.swing.JLabel lbNombreCliente;
