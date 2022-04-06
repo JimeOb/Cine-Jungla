@@ -28,12 +28,12 @@ public class HibernateSession {
 
     private static SessionFactory sessionFactory;
 
-    static {
-        bootstrapHibernate();
-    }
-
     public static Session openSession() {
         return sessionFactory.openSession();
+    }
+
+    public static void initialize() {
+        bootstrapHibernate();
     }
 
     private static void bootstrapHibernate() {

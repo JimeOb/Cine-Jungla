@@ -1,6 +1,7 @@
 package co.edu.udistrital.cine;
 
 import co.edu.udistrital.cine.presentacion.Modelo;
+import co.edu.udistrital.persistencia.HibernateSession;
 
 public class Launcher{
 
@@ -12,7 +13,8 @@ public class Launcher{
     }
         
     public static void main(String[] args){
-        new Launcher();
+        //new Launcher();
+        HibernateSession.initialize();
     }
     
 }
