@@ -21,7 +21,7 @@ public class PnOpcionesEmpleado extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel11.setText("IAMGEN");
+        jLabel11.setText("Imagen");
         add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(19, 28, 380, 120));
 
         btnCarteleraEmpleado.setBackground(new java.awt.Color(238, 28, 28));

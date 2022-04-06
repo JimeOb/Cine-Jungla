@@ -38,12 +38,16 @@ public class ControllerRegistro implements ActionListener {
         if (response.isError()) {
             JOptionPane.showMessageDialog(pnRegistro, mensaje, "Error", JOptionPane.ERROR_MESSAGE);
         } else {
+            pnRegistro.getJtxEmail().setText("");
+            pnRegistro.getJtxNombre().setText("");
+            pnRegistro.getJtxContrasena().setText("");
+
             JOptionPane.showMessageDialog(pnRegistro, mensaje);
             pnRegistro
                     .getVista()
                     .changePanel(pnRegistro.getVista().getPnInfo());
+            
         }
-
     }
 
     private Cliente obtainClient() {
@@ -53,6 +57,7 @@ public class ControllerRegistro implements ActionListener {
                         pnRegistro.getJtxEmail().getText(),
                         new String(pnRegistro.getJtxContrasena().getPassword())
                 ))
+                .addPuntos(0)
                 .build();
         return cliente;
     }

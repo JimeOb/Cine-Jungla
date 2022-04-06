@@ -26,8 +26,7 @@ public class PnDetalle extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
-        jLabel13.setText("IAMGEN");
+        jLabel13.setText("Imagen");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 10, 380, 120));
 
         btnIraPagar.setBackground(new java.awt.Color(0, 204, 51));

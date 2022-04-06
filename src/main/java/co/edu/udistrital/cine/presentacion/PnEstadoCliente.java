@@ -32,7 +32,6 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
         jLabel14.setText("IAMGEN");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 9, 380, 90));
 

@@ -78,6 +78,7 @@ public class HibernateSession {
     }
 
     private static void logError(Exception e) {
+        e.printStackTrace();
         System.out.println(e.getMessage());
     }
     

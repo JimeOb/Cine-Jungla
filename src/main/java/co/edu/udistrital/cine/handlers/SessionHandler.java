@@ -2,6 +2,7 @@ package co.edu.udistrital.cine.handlers;
 
 import co.edu.udistrital.cine.logica.clientes.User;
 import co.edu.udistrital.cine.session.AppSession;
+import co.edu.udistrital.cine.session.IncorrectCredentialsException;
 import co.edu.udistrital.cine.session.SessionService;
 
 public class SessionHandler implements RequestHandler {
@@ -23,8 +24,7 @@ public class SessionHandler implements RequestHandler {
 
         switch(request) {
             case "iniciarSesion": 
-                sessionService.login((User) requestData);
-                break;
+                return handleLogin(requestData);                
             case "cerrarSesion":
                 sessionService.logout();
             case "validate": 
@@ -33,6 +33,19 @@ public class SessionHandler implements RequestHandler {
         }
         
         return new Response();        
+    }
+    
+    private Response handleLogin(Object requestData) {
+        Response response = new Response();
+        
+        try {
+            sessionService.login((User) requestData);            
+        } catch(IncorrectCredentialsException e) {
+            response.setMensaje(e.getMessage());
+            response.setError(true);
+        }
+        
+        return response;
     }
     
     private void validateSession(String request, Object requestData) {
