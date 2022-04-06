@@ -18,7 +18,7 @@ public class PnConfiteria extends javax.swing.JPanel {
     private List<Integer> cantidad;
     private BusqProdu busq;
 
-    public PnConfiteria() {
+    public PnConfiteria(Vista vista) {
         initComponents();
     }
 /*    

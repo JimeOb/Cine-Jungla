@@ -6,7 +6,7 @@ import lombok.Data;
 public class PnOpcionesEmpleado extends javax.swing.JPanel {
 
 
-    public PnOpcionesEmpleado() {
+    public PnOpcionesEmpleado(Vista vista) {
         initComponents();
     }
 

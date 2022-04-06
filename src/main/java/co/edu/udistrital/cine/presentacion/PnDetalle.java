@@ -6,7 +6,7 @@ import lombok.Data;
 public class PnDetalle extends javax.swing.JPanel {
 
 
-    public PnDetalle() {
+    public PnDetalle(Vista vista) {
         initComponents();
     }
 

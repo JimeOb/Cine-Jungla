@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class PnEmpleadoCarteleraReportes extends javax.swing.JPanel {
 
-    public PnEmpleadoCarteleraReportes() {
+    public PnEmpleadoCarteleraReportes(Vista vista) {
         initComponents();
     }
 

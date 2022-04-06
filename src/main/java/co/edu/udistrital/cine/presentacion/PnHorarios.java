@@ -5,7 +5,7 @@ import lombok.Data;
 @Data
 public class PnHorarios extends javax.swing.JPanel {
 
-    public PnHorarios() {
+    public PnHorarios(Vista vista) {
         initComponents();
     }
 
