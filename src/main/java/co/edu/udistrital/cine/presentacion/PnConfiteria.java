@@ -21,7 +21,7 @@ public class PnConfiteria extends javax.swing.JPanel {
     public PnConfiteria() {
         initComponents();
     }
-    
+/*    
     public void llenarProductos(){
         cons = new ArrayList();
         cons = comida.verProductos();
@@ -57,7 +57,7 @@ public class PnConfiteria extends javax.swing.JPanel {
         return cons;
     }
     
-     
+*/
 
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -133,7 +133,7 @@ public class PnConfiteria extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAnadirProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAnadirProductosActionPerformed
-    this.productos(jcNombCom);
+    //this.productos(jcNombCom);
     }//GEN-LAST:event_btnAnadirProductosActionPerformed
 
 
