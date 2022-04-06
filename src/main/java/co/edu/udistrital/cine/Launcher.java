@@ -6,6 +6,7 @@ import co.edu.udistrital.cine.handlers.ClientHandler;
 import co.edu.udistrital.cine.handlers.SessionHandler;
 import co.edu.udistrital.cine.logica.clientes.ClientBuilder;
 import co.edu.udistrital.cine.presentacion.ControllerRegistro;
+import co.edu.udistrital.cine.presentacion.PnCliente;
 import co.edu.udistrital.cine.presentacion.PnRegistro;
 import co.edu.udistrital.cine.presentacion.Vista;
 import co.edu.udistrital.cine.session.AppSession;
@@ -54,7 +55,10 @@ public class Launcher{
         PnRegistro pnRegistro = new PnRegistro(vista, registroController);     
         registroController.registerPnRegistro(pnRegistro);
         
+        PnCliente pnCliente = new PnCliente();
         
         vista.setPnRegistro(pnRegistro);
+        vista.setPnCliente(pnCliente);
+        vista.setHandler(sessionHandler);
     }
 }

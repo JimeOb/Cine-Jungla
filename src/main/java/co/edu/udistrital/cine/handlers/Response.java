@@ -6,9 +6,9 @@ import lombok.Data;
 @Data
 public class Response {
 
-    String mensaje;
-    Object data;
-    Iterator<Object> collection;       
-    boolean isError;
+    private String mensaje;
+    private Object data;
+    private Iterator<Object> collection;       
+    private boolean isError = false;
     
 }

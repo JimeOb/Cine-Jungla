@@ -43,7 +43,6 @@ public class ControllerRegistro implements ActionListener {
                     .getVista()
                     .changePanel(pnRegistro.getVista().getPnInfo());
         }
-
     }
 
     private Cliente obtainClient() {
