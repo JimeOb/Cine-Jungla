@@ -1,6 +1,7 @@
 package co.edu.udistrital.cine.logica;
 
 import co.edu.udistrital.cine.empleado.Empleado;
+import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -32,5 +33,8 @@ public class Multiplex {
     
     @OneToMany(mappedBy = "multiplex")
     private List<Empleado> empleados;
+    
+    @OneToMany(mappedBy = "multiplex")
+    private List<ProductosMultiplex> productos;
     
 }

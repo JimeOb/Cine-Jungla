@@ -15,6 +15,7 @@ import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
 import co.edu.udistrital.cine.ventas.ProductoVenta;
 import co.edu.udistrital.cine.ventas.ProductoVentaIdentity;
 import co.edu.udistrital.cine.ventas.Venta;
+import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.Metadata;
@@ -72,6 +73,7 @@ public class HibernateSession {
                 .addAnnotatedClass(Venta.class)
                 .addAnnotatedClass(ProductoVenta.class)
                 .addAnnotatedClass(ProductoVentaIdentity.class)
+                .addAnnotatedClass(ProductosMultiplex.class)
                 .buildMetadata();
     }
 
