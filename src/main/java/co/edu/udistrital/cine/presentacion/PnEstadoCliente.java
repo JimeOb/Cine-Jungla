@@ -32,11 +32,12 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
         jLabel14.setText("IAMGEN");
         add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 9, 380, 90));
 
         lbNombreCliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbNombreCliente.setText("nombre del cliente :v");
+        lbNombreCliente.setText("nombre del cliente ");
         add(lbNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 550, 40));
 
         asdfwgvcasfvasf8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -44,7 +45,7 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         add(asdfwgvcasfvasf8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 40));
 
         lbNumPuntos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbNumPuntos.setText("1000");
+        lbNumPuntos.setText("value");
         add(lbNumPuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 80, 40));
 
         asdfwgvcasfvasf10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -57,7 +58,7 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         add(btnRegresaMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 210, 50));
 
         lbPeliculaReserva.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbPeliculaReserva.setText("1000");
+        lbPeliculaReserva.setText("value");
         add(lbPeliculaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 310, 40));
 
         asdfwgvcasfvasf11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
@@ -65,7 +66,7 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         add(asdfwgvcasfvasf11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
 
         lbNumBoletasCompradas.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbNumBoletasCompradas.setText("1000");
+        lbNumBoletasCompradas.setText("value");
         add(lbNumBoletasCompradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 320, 40));
 
         asdfwgvcasfvasf12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

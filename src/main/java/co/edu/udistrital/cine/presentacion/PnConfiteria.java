@@ -110,7 +110,7 @@ public class PnConfiteria extends javax.swing.JPanel {
 
         lbNommultiplex.setBackground(new java.awt.Color(255, 255, 255));
         lbNommultiplex.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbNommultiplex.setText("Nombre pelicula");
+        lbNommultiplex.setText("Id_multiplex");
         add(lbNommultiplex, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 320, 20));
     }// </editor-fold>//GEN-END:initComponents
 

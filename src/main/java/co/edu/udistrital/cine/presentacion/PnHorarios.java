@@ -31,6 +31,7 @@ public class PnHorarios extends javax.swing.JPanel {
         jlTittle1.setBackground(new java.awt.Color(0, 0, 0));
         jlTittle1.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jlTittle1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jlTittle1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
         jlTittle1.setText("IMAGEN");
         add(jlTittle1, new org.netbeans.lib.awtextra.AbsoluteConstraints(104, 24, 420, 120));
 
