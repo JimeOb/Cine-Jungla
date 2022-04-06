@@ -512,8 +512,8 @@ public class Vista extends javax.swing.JFrame {
         this.P9 = P9;
     }
 
-    public JButton getBtnAñadirProductos() {
-        return btnAñadirProductos;
+    public JButton getBtnAnadirProductos() {
+        return btnAnadirProductos;
     }
 
     public JButton getBtnCarteleraEmpleado() {
@@ -636,8 +636,8 @@ public class Vista extends javax.swing.JFrame {
         return jtEmpleado;
     }
 
-    public JPasswordField getJtxContraseña() {
-        return jtxContraseña;
+    public JPasswordField getJtxContrasena() {
+        return jtxContrasena;
     }
 
     public JTextField getJtxUsuario() {
@@ -738,7 +738,7 @@ public class Vista extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jtxUsuario = new javax.swing.JTextField();
-        jtxContraseña = new javax.swing.JPasswordField();
+        jtxContrasena = new javax.swing.JPasswordField();
         btnIniciar = new javax.swing.JButton();
         jLabel6 = new javax.swing.JLabel();
         pnOpcionesCliente = new javax.swing.JPanel();
@@ -871,7 +871,7 @@ public class Vista extends javax.swing.JFrame {
         jcNombCom = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
         jLabel16 = new javax.swing.JLabel();
-        btnAñadirProductos = new javax.swing.JButton();
+        btnAnadirProductos = new javax.swing.JButton();
         btnIraPagarComida = new javax.swing.JButton();
         asdfwgvcasfvasf11 = new javax.swing.JLabel();
         asdfwgvcasfvasf12 = new javax.swing.JLabel();
@@ -899,8 +899,8 @@ public class Vista extends javax.swing.JFrame {
         jtxUsuario.setBackground(new java.awt.Color(204, 204, 204));
         pnPrincipal.add(jtxUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 290, 40));
 
-        jtxContraseña.setBackground(new java.awt.Color(204, 204, 204));
-        pnPrincipal.add(jtxContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 290, 40));
+        jtxContrasena.setBackground(new java.awt.Color(204, 204, 204));
+        pnPrincipal.add(jtxContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 290, 40));
 
         btnIniciar.setBackground(new java.awt.Color(238, 28, 28));
         btnIniciar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
@@ -1364,10 +1364,10 @@ public class Vista extends javax.swing.JFrame {
         jLabel16.setText("IMAGEN");
         pnConfiteria.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 30, 380, 120));
 
-        btnAñadirProductos.setBackground(new java.awt.Color(204, 204, 204));
-        btnAñadirProductos.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
-        btnAñadirProductos.setText("Añadir al carrito");
-        pnConfiteria.add(btnAñadirProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 210, 50));
+        btnAnadirProductos.setBackground(new java.awt.Color(204, 204, 204));
+        btnAnadirProductos.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
+        btnAnadirProductos.setText("Añadir al carrito");
+        pnConfiteria.add(btnAnadirProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 560, 210, 50));
 
         btnIraPagarComida.setBackground(new java.awt.Color(102, 255, 51));
         btnIraPagarComida.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
@@ -1480,7 +1480,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel asdfwgvcasfvasf8;
     private javax.swing.JLabel asdgvaxdsdefs;
     private javax.swing.JLabel asdgvaxdsdefs1;
-    private javax.swing.JButton btnAñadirProductos;
+    private javax.swing.JButton btnAnadirProductos;
     private javax.swing.JButton btnCarteleraEmpleado;
     private javax.swing.JButton btnComprarBoletos;
     private javax.swing.JButton btnComprarComida;
@@ -1530,7 +1530,7 @@ public class Vista extends javax.swing.JFrame {
     private javax.swing.JLabel jlTittle1;
     private javax.swing.JTable jtConfiteria;
     private javax.swing.JTable jtEmpleado;
-    private javax.swing.JPasswordField jtxContraseña;
+    private javax.swing.JPasswordField jtxContrasena;
     private javax.swing.JTextField jtxUsuario;
     private javax.swing.JLabel lbNomMultiplexEmpleado;
     private javax.swing.JLabel lbNombreCliente;
