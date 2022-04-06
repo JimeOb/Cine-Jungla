@@ -41,7 +41,7 @@ public class PnRegistro extends javax.swing.JPanel {
         btnRegistrar.setBackground(new java.awt.Color(238, 28, 28));
         btnRegistrar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnRegistrar.setText("Registrar usuario");
-        add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 440, 180, 40));
+        add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 180, 40));
 
         jLabel6.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(220, 27, 27));

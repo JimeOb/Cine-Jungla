@@ -26,6 +26,7 @@ public class PnDetalle extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Assets/CINE.jpg"))); // NOI18N
         jLabel13.setText("IAMGEN");
         add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(169, 10, 380, 120));
 
@@ -55,7 +56,7 @@ public class PnDetalle extends javax.swing.JPanel {
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(59, 250, 590, 120));
 
         lbPrecioaPagar.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        lbPrecioaPagar.setText("MoNtO :3");
+        lbPrecioaPagar.setText("Monto");
         add(lbPrecioaPagar, new org.netbeans.lib.awtextra.AbsoluteConstraints(199, 450, 190, 40));
 
         asdfwgvcasfvasf4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

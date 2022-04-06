@@ -1,6 +1,7 @@
 package co.edu.udistrital.cine.presentacion;
 
 import co.edu.udistrital.cine.logica.confiteria.creadorProductos.FactAlimento;
+import co.edu.udistrital.cine.logica.confiteria.productos.BusqProdu;
 import co.edu.udistrital.cine.logica.confiteria.productos.Comida;
 import co.edu.udistrital.cine.logica.confiteria.productos.ProductosMultiplex;
 import java.util.ArrayList;
@@ -14,6 +15,7 @@ public class PnConfiteria extends javax.swing.JPanel {
     private FactAlimento comida;
     private List<Comida> cons;
     private List<ProductosMultiplex> consCant;
+    private BusqProdu busq;
 
     public PnConfiteria() {
         initComponents();
@@ -31,14 +33,13 @@ public class PnConfiteria extends javax.swing.JPanel {
     
      public void llenarCantidad(JComboBox jcNombCom, JComboBox jcCantCom, Integer multiplex){
         jcCantCom.removeAllItems();
-
-        consCant = comida.verStockP(multiplex);
         cons = comida.verProductos();
         
         for(int i = 0;i<cons.size(); i++){
             if(jcNombCom.getSelectedItem().toString() == cons.get(i).getNombre()){
-                for(int n = 0;n<=consCant.get(n).getCantidad(); n++){  
-                jcCantCom.addItem(n);
+                consCant = busq.busPorMultPro(multiplex, cons.get(i).getIdProducto());
+                for(int n = 0;n<=consCant.get(0).getCantidad(); n++){  
+                    jcCantCom.addItem(n);
                 }
             break;
             }
@@ -109,7 +110,7 @@ public class PnConfiteria extends javax.swing.JPanel {
 
         lbNommultiplex.setBackground(new java.awt.Color(255, 255, 255));
         lbNommultiplex.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbNommultiplex.setText("Nombre pelicula");
+        lbNommultiplex.setText("Id_multiplex");
         add(lbNommultiplex, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 410, 320, 20));
     }// </editor-fold>//GEN-END:initComponents
 
