@@ -52,6 +52,7 @@ public class ControllerRegistro implements ActionListener {
                         pnRegistro.getJtxEmail().getText(),
                         new String(pnRegistro.getJtxContrasena().getPassword())
                 ))
+                .addPuntos(0)
                 .build();
         return cliente;
     }
