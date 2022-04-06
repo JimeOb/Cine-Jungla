@@ -19,18 +19,24 @@ public class PnEmpleadoCarteleraReportes extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         jtEmpleado = new javax.swing.JTable();
 
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
         jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel15.setText("IMAGNE");
+        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 10, 380, 120));
 
         lbNomMultiplexEmpleado.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lbNomMultiplexEmpleado.setText("1000");
+        add(lbNomMultiplexEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(181, 180, 310, 40));
 
         asdasdasf.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         asdasdasf.setText("Multiplex:");
+        add(asdasdasf, new org.netbeans.lib.awtextra.AbsoluteConstraints(51, 180, 140, 40));
 
         btnRegresaMenuEmpleado.setBackground(new java.awt.Color(204, 204, 204));
         btnRegresaMenuEmpleado.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnRegresaMenuEmpleado.setText("Regresar");
+        add(btnRegresaMenuEmpleado, new org.netbeans.lib.awtextra.AbsoluteConstraints(531, 560, 210, 50));
 
         jtEmpleado.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -45,48 +51,7 @@ public class PnEmpleadoCarteleraReportes extends javax.swing.JPanel {
         ));
         jScrollPane2.setViewportView(jtEmpleado);
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 753, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 11, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(170, 170, 170)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(asdasdasf, javax.swing.GroupLayout.PREFERRED_SIZE, 140, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(130, 130, 130)
-                                    .addComponent(lbNomMultiplexEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 310, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(520, 520, 520)
-                            .addComponent(btnRegresaMenuEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 12, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 621, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 10, Short.MAX_VALUE)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(50, 50, 50)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(asdasdasf, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbNomMultiplexEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(20, 20, 20)
-                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(160, 160, 160)
-                    .addComponent(btnRegresaMenuEmpleado, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 11, Short.MAX_VALUE)))
-        );
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(11, 240, 730, 160));
     }// </editor-fold>//GEN-END:initComponents
 
 

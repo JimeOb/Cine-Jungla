@@ -18,93 +18,105 @@ public class PnEstadoCliente extends javax.swing.JPanel {
         asdfwgvcasfvasf8 = new javax.swing.JLabel();
         lbNumPuntos = new javax.swing.JLabel();
         asdfwgvcasfvasf10 = new javax.swing.JLabel();
-        btnboletaGratis = new javax.swing.JButton();
         btnRegresaMenu = new javax.swing.JButton();
+        lbPeliculaReserva = new javax.swing.JLabel();
+        asdfwgvcasfvasf11 = new javax.swing.JLabel();
+        lbNumBoletasCompradas = new javax.swing.JLabel();
+        asdfwgvcasfvasf12 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jtBoletasPuntos = new javax.swing.JTable();
+        btnRedimirBoletas = new javax.swing.JButton();
+        asdfwgvcasfvasf13 = new javax.swing.JLabel();
+        cmbIdBoletasRedimibles = new javax.swing.JComboBox<>();
+
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel14.setText("IAMGEN");
+        add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(189, 9, 380, 90));
 
         lbNombreCliente.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lbNombreCliente.setText("nombre del cliente :v");
+        add(lbNombreCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 120, 550, 40));
 
         asdfwgvcasfvasf8.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         asdfwgvcasfvasf8.setText("Cliente:");
+        add(asdfwgvcasfvasf8, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 120, 100, 40));
 
         lbNumPuntos.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         lbNumPuntos.setText("1000");
+        add(lbNumPuntos, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 190, 80, 40));
 
         asdfwgvcasfvasf10.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         asdfwgvcasfvasf10.setText("Puntos obtenidos: ");
-
-        btnboletaGratis.setBackground(new java.awt.Color(0, 204, 51));
-        btnboletaGratis.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
-        btnboletaGratis.setText("Obtener boleta gratis!");
+        add(asdfwgvcasfvasf10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, 200, 40));
 
         btnRegresaMenu.setBackground(new java.awt.Color(204, 204, 204));
         btnRegresaMenu.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnRegresaMenu.setText("Regresar");
+        add(btnRegresaMenu, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 560, 210, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 759, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 9, Short.MAX_VALUE)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(180, 180, 180)
-                            .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(asdfwgvcasfvasf8, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addComponent(lbNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 550, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addComponent(asdfwgvcasfvasf10, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGap(10, 10, 10)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(layout.createSequentialGroup()
-                                    .addGap(70, 70, 70)
-                                    .addComponent(btnboletaGratis, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addComponent(lbNumPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 80, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGroup(layout.createSequentialGroup()
-                            .addGap(530, 530, 530)
-                            .addComponent(btnRegresaMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGap(0, 10, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 618, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 9, Short.MAX_VALUE)
-                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(30, 30, 30)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(asdfwgvcasfvasf8, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbNombreCliente, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(150, 150, 150)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(asdfwgvcasfvasf10, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(btnboletaGratis, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(lbNumPuntos, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(160, 160, 160)
-                    .addComponent(btnRegresaMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 9, Short.MAX_VALUE)))
-        );
+        lbPeliculaReserva.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbPeliculaReserva.setText("1000");
+        add(lbPeliculaReserva, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 310, 40));
+
+        asdfwgvcasfvasf11.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        asdfwgvcasfvasf11.setText("Pelicula reservada:");
+        add(asdfwgvcasfvasf11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 250, 200, 40));
+
+        lbNumBoletasCompradas.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        lbNumBoletasCompradas.setText("1000");
+        add(lbNumBoletasCompradas, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 310, 320, 40));
+
+        asdfwgvcasfvasf12.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        asdfwgvcasfvasf12.setText("ID Boleta:");
+        add(asdfwgvcasfvasf12, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 490, 110, 40));
+
+        jtBoletasPuntos.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jtBoletasPuntos);
+
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 370, 410, 160));
+
+        btnRedimirBoletas.setBackground(new java.awt.Color(204, 204, 204));
+        btnRedimirBoletas.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
+        btnRedimirBoletas.setText("Redimir boletas");
+        add(btnRedimirBoletas, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 560, 210, 50));
+
+        asdfwgvcasfvasf13.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        asdfwgvcasfvasf13.setText("Boletas reservadas:");
+        add(asdfwgvcasfvasf13, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, 210, 40));
+
+        cmbIdBoletasRedimibles.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
+        add(cmbIdBoletasRedimibles, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 490, 140, 40));
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel asdfwgvcasfvasf10;
+    private javax.swing.JLabel asdfwgvcasfvasf11;
+    private javax.swing.JLabel asdfwgvcasfvasf12;
+    private javax.swing.JLabel asdfwgvcasfvasf13;
     private javax.swing.JLabel asdfwgvcasfvasf8;
+    private javax.swing.JButton btnRedimirBoletas;
     private javax.swing.JButton btnRegresaMenu;
-    private javax.swing.JButton btnboletaGratis;
+    private javax.swing.JComboBox<String> cmbIdBoletasRedimibles;
     private javax.swing.JLabel jLabel14;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable jtBoletasPuntos;
     private javax.swing.JLabel lbNombreCliente;
+    private javax.swing.JLabel lbNumBoletasCompradas;
     private javax.swing.JLabel lbNumPuntos;
+    private javax.swing.JLabel lbPeliculaReserva;
     // End of variables declaration//GEN-END:variables
 
     private void capturarEventos() {
