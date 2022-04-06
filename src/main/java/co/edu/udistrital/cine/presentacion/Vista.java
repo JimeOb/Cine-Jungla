@@ -70,16 +70,12 @@ public class Vista extends javax.swing.JFrame {
         btnIniciar.setBackground(new java.awt.Color(238, 28, 28));
         btnIniciar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnIniciar.setText("Iniciar Sesión");
-<<<<<<< HEAD
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarActionPerformed(evt);
             }
         });
-        pnInfo.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, 180, 40));
-=======
         pnInfo.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 470, 180, 40));
->>>>>>> 3b5e6d74638bfa82644e11245fb6c4dfbc46057c
 
         jButton1.setBackground(new java.awt.Color(102, 153, 255));
         jButton1.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
