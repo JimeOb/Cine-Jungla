@@ -1,12 +1,12 @@
 package co.edu.udistrital.cine.presentacion;
 
 import lombok.Data;
-
+//
 @Data
 public class PnSala extends javax.swing.JPanel {
 
 
-    public PnSala() {
+    public PnSala(Vista vista) {
         initComponents();
     }
 

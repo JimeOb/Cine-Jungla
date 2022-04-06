@@ -2,7 +2,7 @@ package co.edu.udistrital.cine.presentacion;
 
 import lombok.Getter;
 import lombok.Setter;
-
+//
 @Getter
 @Setter
 public class PnRegistro extends javax.swing.JPanel {

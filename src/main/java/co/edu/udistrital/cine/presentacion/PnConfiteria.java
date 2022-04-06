@@ -8,7 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JComboBox;
 import lombok.Data;
-
+//
 @Data
 public class PnConfiteria extends javax.swing.JPanel {
 

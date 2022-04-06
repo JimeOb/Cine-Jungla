@@ -1,7 +1,7 @@
 package co.edu.udistrital.cine.presentacion;
 
 import lombok.Data;
-
+//
 @Data
 public class PnOpcionesEmpleado extends javax.swing.JPanel {
 

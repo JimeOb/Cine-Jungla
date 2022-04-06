@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 @Getter
 public class Vista extends javax.swing.JFrame {
-
+//
     private PnRegistro pnRegistro;
     
     public Vista() {
