@@ -14,3 +14,7 @@
 <div>
     <h3>Descripción:</h3>
     <p>El software computacional “Cine jungla” surge de la necesidad de manipular de manera sistematizada y automatizada los datos dentro de un cine, con el fin de facilitar y llevar un control de todos los procesos de búsqueda, compra, venta y asignación, funciones las cuales son primordiales para el buen funcionamiento del cine.</p>
+<div>
+        <h3>Diagrama UML de clases: </h3>
+        <img src="\src\main\java\Assets\UML.jpg">
+</div>
