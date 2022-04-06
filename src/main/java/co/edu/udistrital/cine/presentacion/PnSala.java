@@ -214,7 +214,7 @@ public class PnSala extends javax.swing.JPanel {
 
         lbhorFuncion.setBackground(new java.awt.Color(255, 255, 255));
         lbhorFuncion.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbhorFuncion.setText("Nombre pelicula");
+        lbhorFuncion.setText("Hora");
         add(lbhorFuncion, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 610, 320, 20));
 
         lbNompelicula.setBackground(new java.awt.Color(255, 255, 255));
@@ -224,7 +224,7 @@ public class PnSala extends javax.swing.JPanel {
 
         lbNommultiplex.setBackground(new java.awt.Color(255, 255, 255));
         lbNommultiplex.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbNommultiplex.setText("Nombre pelicula");
+        lbNommultiplex.setText("Id_multiplex");
         add(lbNommultiplex, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 530, 320, 20));
 
         jLabel12.setBackground(new java.awt.Color(255, 255, 255));
@@ -234,7 +234,7 @@ public class PnSala extends javax.swing.JPanel {
 
         lbnomSala.setBackground(new java.awt.Color(255, 255, 255));
         lbnomSala.setFont(new java.awt.Font("Segoe UI", 1, 15)); // NOI18N
-        lbnomSala.setText("Nombre pelicula");
+        lbnomSala.setText("Id_sala");
         add(lbnomSala, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 570, 320, 20));
 
         btnIniciar1.setBackground(new java.awt.Color(153, 255, 153));
