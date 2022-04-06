@@ -40,40 +40,46 @@ public class Vista extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(800, 600));
         getContentPane().setLayout(new java.awt.FlowLayout());
 
         pnInfo.setBackground(new java.awt.Color(255, 255, 255));
+        pnInfo.setPreferredSize(new java.awt.Dimension(800, 600));
         pnInfo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(233, 18, 18));
         jLabel5.setText("Usuario :");
-        pnInfo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 270, 210, 50));
+        pnInfo.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 210, 210, 50));
 
         jtxUsuario1.setBackground(new java.awt.Color(204, 204, 204));
-        pnInfo.add(jtxUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 280, 290, 40));
+        pnInfo.add(jtxUsuario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 220, 290, 40));
 
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel11.setToolTipText("");
-        pnInfo.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 60, 530, 200));
+        pnInfo.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 30, 530, 200));
 
         jLabel12.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(220, 27, 27));
         jLabel12.setText("Contraseña:");
-        pnInfo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 350, 210, 50));
+        pnInfo.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 330, 210, 50));
 
         jtxContrasena2.setBackground(new java.awt.Color(204, 204, 204));
-        pnInfo.add(jtxContrasena2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, 290, 40));
+        pnInfo.add(jtxContrasena2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 330, 290, 40));
 
         btnIniciar.setBackground(new java.awt.Color(238, 28, 28));
         btnIniciar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnIniciar.setText("Iniciar Sesión");
+<<<<<<< HEAD
         btnIniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnIniciarActionPerformed(evt);
             }
         });
         pnInfo.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 470, 180, 40));
+=======
+        pnInfo.add(btnIniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 470, 180, 40));
+>>>>>>> 3b5e6d74638bfa82644e11245fb6c4dfbc46057c
 
         jButton1.setBackground(new java.awt.Color(102, 153, 255));
         jButton1.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
@@ -83,7 +89,7 @@ public class Vista extends javax.swing.JFrame {
                 jButton1ActionPerformed(evt);
             }
         });
-        pnInfo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 480, 180, 40));
+        pnInfo.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 470, 180, 40));
 
         getContentPane().add(pnInfo);
 

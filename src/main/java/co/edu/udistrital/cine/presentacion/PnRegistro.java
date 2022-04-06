@@ -16,66 +16,99 @@ public class PnRegistro extends javax.swing.JPanel {
         this.control = controller;        
         capturarEventos();
     }
-    
+    @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel3 = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel1 = new javax.swing.JLabel();
         jtxNombre = new javax.swing.JTextField();
-        jtxContrasena = new javax.swing.JPasswordField();
-        btnRegistrar = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
         jtxEmail = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        btnRegistrar = new javax.swing.JButton();
+        jtxContrasena = new javax.swing.JPasswordField();
 
-        setBackground(new java.awt.Color(255, 255, 255));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPasswordField1.setText("jPasswordField1");
+
+        jLabel1.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(233, 18, 18));
+        jLabel1.setText("Nombre");
+
+        jLabel2.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(233, 18, 18));
+        jLabel2.setText("Correo");
 
         jLabel3.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(233, 18, 18));
-        jLabel3.setText("Usuario :");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 170, 210, 50));
-
-        jtxNombre.setBackground(new java.awt.Color(204, 204, 204));
-        add(jtxNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 170, 290, 40));
-
-        jtxContrasena.setBackground(new java.awt.Color(204, 204, 204));
-        add(jtxContrasena, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 300, 290, 40));
+        jLabel3.setText("Contraseña");
 
         btnRegistrar.setBackground(new java.awt.Color(238, 28, 28));
         btnRegistrar.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
         btnRegistrar.setText("Registrar usuario");
-        add(btnRegistrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 410, 180, 40));
 
-        jLabel6.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(220, 27, 27));
-        jLabel6.setText("Contraseña:");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 290, 210, 50));
-
-        jLabel4.setFont(new java.awt.Font("Bell MT", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(233, 18, 18));
-        jLabel4.setText("Email :");
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 230, 210, 50));
-
-        jtxEmail.setBackground(new java.awt.Color(204, 204, 204));
-        add(jtxEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 230, 290, 40));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(132, 132, 132)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(38, 38, 38)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jtxEmail)
+                            .addComponent(jtxNombre)
+                            .addComponent(jtxContrasena, javax.swing.GroupLayout.DEFAULT_SIZE, 185, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(245, 245, 245)
+                        .addComponent(btnRegistrar)))
+                .addContainerGap(179, Short.MAX_VALUE))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(205, 205, 205)
+                        .addComponent(jLabel1))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addGap(190, 190, 190)
+                        .addComponent(jtxNombre, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(56, 56, 56)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jtxEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(47, 47, 47)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(jtxContrasena, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 34, Short.MAX_VALUE)
+                .addComponent(btnRegistrar)
+                .addGap(37, 37, 37))
+        );
     }// </editor-fold>//GEN-END:initComponents
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnRegistrar;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JPasswordField jtxContrasena;
     private javax.swing.JTextField jtxEmail;
     private javax.swing.JTextField jtxNombre;
     // End of variables declaration//GEN-END:variables
-
     private void capturarEventos() {
  
         btnRegistrar.addActionListener(control);
         
     }
-
+    
 }
+
